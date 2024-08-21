@@ -1,0 +1,466 @@
+<link rel="stylesheet" href="/home/kchrist/Dev/heurist-cms-website/css/heurist.css">
+
+<div class="card text-center" data-bs-theme="light">
+    <div class="card-body">
+      <h4 class="card-title" font-size=40px>Definition
+      </h4>
+      <p class="card-text">A manifestation of a <span class="badge-entity">Text</span> in a determined and legible sequence of characters, which have been inscribed on a physical document.
+      </p>
+      <h4 class="card-title">Relationships
+      </h4>
+      <p>Relationships that are registered on the <span class="badge-entity">Witness</span> entity itself / originating from it.</p>
+      <ul>
+        <li>Required
+        </li>
+        <ul>
+          <li><span class="badge-entity">Witness</span> must relate to 1 <span class="badge-entity">Text</span>.</li>
+          <li><span class="badge-entity">Witness</span> must be related to 1 term from <span class="badge-vocab">Status</span>.</li>
+        </ul>
+        <li>Optional
+        </li>
+        <ul>
+          <li><span class="badge-entity">Witness</span> can relate to 0, 1, or many <span class="badge-entity">Part</span>.</li>
+          <li><span class="badge-entity">Witness</span> can relate to 0, 1, or many <span class="badge-entity">Hypothesis</span>.</li>
+          <li><span class="badge-entity">Witness</span> can relate to 0 or 1 <span class="badge-entity">Witness</span>.</li>
+          <li><span class="badge-entity">Witness</span> can relate to 0, 1, or many <span class="badge-entity">Document</span>.</li>
+          <li><span class="badge-entity">Witness</span> can relate to 0, 1, or many <span class="badge-entity">Person</span>.</li>
+          <li><span class="badge-entity">Witness</span> can relate to 0, 1, or many <span class="badge-entity">Place</span>.</li>
+          <li>
+            <span class="badge-entity">Witness
+            </span> can relate to 0, 1, or many 
+            <span class="badge-entity">Citation
+            </span>.
+          </li>
+        </ul>
+      </ul>
+    </div>
+    <div class="card-body">
+      <h4 class="card-title" font-size=40px>Attributes
+      </h4>
+      <div class="card-header">
+        Label Components
+      </div>
+      <div class="card-text">
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th>Name
+              </th>
+              <th>Required
+              </th>
+              <th>Repeatable
+              </th>
+              <th>Data type
+              </th>
+              <th>Definition
+              </th>
+              <th>Refers to entity
+              </th>
+              <th>Defined by vocabulary
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+                <td><a class="link" target="_blank" href="https://www.wikidata.org/wiki/Property:P1557">is manifestation of</a>
+                </td>
+                <td>yes
+                </td>
+                <td>no
+                </td>
+                <td>Foreign key
+                </td>
+                <td><a class="link" target="_blank" href="https://www.wikidata.org/wiki/Property:P1557">The item, which represents information, of which the entity is a physical embodiment and inscription.</a>
+                </td>
+                <td><span class="badge-entity">Text</span>
+                </td>
+                <td>NA
+                </td>
+              </tr>
+              <tr>
+                <td>preferred siglum
+                </td>
+                <td>no
+                </td>
+                <td>no
+                </td>
+                <td>Text (single line)
+                </td>
+                <td><a class="link" target="_blank" href="https://www.wikidata.org/wiki/Q102786">An abbreviation, usually a letter or a letter with an integer, assigned to a source.</a>
+                </td>
+                <td>NA
+                </td>
+                <td>NA
+                </td>
+              </tr>
+              <tr>
+                <td><span class="link" target="_blank" href="https://www.wikidata.org/wiki/Property:P527">has part</span>
+                </td>
+                <td>no
+                </td>
+                <td>yes
+                </td>
+                <td>Foreign key
+                </td>
+                <td><span class="link" target="_blank" href="https://www.wikidata.org/wiki/Property:P527">Part(s) constituting the entity.</span>
+                </td>
+                <td><span class="badge-entity">Part</span>
+                </td>
+                <td>NA
+                </td>
+              </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="card-header">
+        Hypothesis
+      </div>
+      <div class="card-text">
+        <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th>Name
+                </th>
+                <th>Required
+                </th>
+                <th>Repeatable
+                </th>
+                <th>Data type
+                </th>
+                <th>Definition
+                </th>
+                <th>Refers to entity
+                </th>
+                <th>Defined by vocabulary
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>is hypothetical
+                </td>
+                <td>yes
+                </td>
+                <td>no
+                </td>
+                <td>Boolean
+                </td>
+                <td>Whether the entity is attested (True) in a hypothesis or whether it is received as fact that it exists or existed (False). Default is "False."
+                </td>
+                <td>NA
+                </td>
+                <td>NA
+                </td>
+              </tr>
+              <tr>
+                <td><a class="link" target="_blank" href="https://www.wikidata.org/wiki/Property:P248">stated in</a>
+                </td>
+                <td>no
+                </td>
+                <td>yes
+                </td>
+                <td>Foreign key
+                </td>
+                <td><a class="link" target="_blank" href="https://www.wikidata.org/wiki/Property:P248">Source in which a claim attesting to the existence of the hypothetical entity is made.</a>
+                </td>
+                <td><span class="badge-entity">Hypothesis</span>
+                </td>
+                <td>NA
+                </td>
+              </tr>
+            </tbody>
+          </table>
+      </div>
+      <div class="card-header">
+        Description
+      </div>
+      <div class="card-text">
+        <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th>Name
+                </th>
+                <th>Required
+                </th>
+                <th>Repeatable
+                </th>
+                <th>Data type
+                </th>
+                <th>Definition
+                </th>
+                <th>Refers to entity
+                </th>
+                <th>Defined by vocabulary
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>status
+                </td>
+                <td>yes
+                </td>
+                <td>no
+                </td>
+                <td>Vocabulary
+                </td>
+                <td>Survival status of the entity.
+                </td>
+                <td>NA
+                </td>
+                <td><span class="badge-vocab">Status</span>
+                </td>
+              </tr>
+              <tr>
+                <td>status notes
+                </td>
+                <td>no
+                </td>
+                <td>no
+                </td>
+                <td>Text (multiple lines)
+                </td>
+                <td>Brief notes about the survival status of the entity.
+                </td>
+                <td>NA
+                </td>
+                <td>NA
+                </td>
+              </tr>
+              <tr>
+                <td>is citation
+                </td>
+                <td>yes
+                </td>
+                <td>no
+                </td>
+                <td>Boolean
+                </td>
+                <td>The <span class="badge-entity">Witness</span> does not seek to fully manifest the <span class="badge-entity">Text</span> but rather makes reference to it in a different literary context.
+                </td>
+                <td>NA
+                </td>
+                <td>NA
+                </td>
+              </tr>
+              <tr>
+                <td>was preceded by fragment
+                </td>
+                <td>no
+                </td>
+                <td>no
+                </td>
+                <td>Foreign key
+                </td>
+                <td>If the <span class="badge-entity">Witness</span> is of <span class="badge-vocab">Status</span> "fragment", another fragment of the same <span class="badge-entity">Text</span> and from the same codicological unit that represents an earlier part of the <span class="badge-entity">Text</span>, so that this entity and the linked entity would constitute two sequential parts of one composite <span class="badge-entity">Witness</span>.
+                </td>
+                <td><span class="badge-entity">Witness</span>
+                </td>
+                <td>NA
+                </td>
+              </tr>
+              <tr>
+                <td>was part of
+                </td>
+                <td>no
+                </td>
+                <td>yes
+                </td>
+                <td>Foreign key
+                </td>
+                <td>If it is known or attested that the <span class="badge-entity">Witness</span> was once part of a <span class="badge-entity">Document</span> that is now lost or destroyed, the hypothetical <span class="badge-entity">Document</span>.
+                </td>
+                <td><span class="badge-entity">Document</span>
+                </td>
+                <td>NA
+                </td>
+              </tr>
+              <tr>
+                <td>was preceded by witness
+                </td>
+                <td>no
+                </td>
+                <td>no
+                </td>
+                <td>Foreign key
+                </td>
+                <td>If the <span class="badge-entity">Witness</span> was originally with another <span class="badge-entity">Witness</span>, especially the <span class="badge-entity">Witness</span> of a different <span class="badge-entity">Text</span>, in a now lost or disassembled <span class="badge-entity">Document</span>, the <span class="badge-entity">Witness</span> that immediately preceded it in the hypothetical <span class="badge-entity">Document</span>.
+                </td>
+                <td><span class="badge-entity">Witness</span>
+                </td>
+                <td>NA
+                </td>
+              </tr>
+            </tbody>
+          </table>
+      </div>
+      <div class="card-header">
+        Production
+      </div>
+      <div class="card-text">
+        <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th>Name
+                </th>
+                <th>Required
+                </th>
+                <th>Repeatable
+                </th>
+                <th>Data type
+                </th>
+                <th>Definition
+                </th>
+                <th>Refers to entity
+                </th>
+                <th>Defined by vocabulary
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>scribe
+                </td>
+                <td>no
+                </td>
+                <td>yes
+                </td>
+                <td>Foreign key
+                </td>
+                <td>The scribe accredited with composing the <span class="badge-entity">Witness</span>.
+                </td>
+                <td><span class="badge-entity">Person</span>
+                </td>
+                <td>NA
+                </td>
+              </tr>
+              <tr>
+                <td>written language variant
+                </td>
+                <td>no
+                </td>
+                <td>no
+                </td>
+                <td>Vocabulary
+                </td>
+                <td>A regional writing style, also known as scripta, similar to the written version of a spoken dialect.
+                </td>
+                <td>NA
+                </td>
+                <td><span class="badge-vocab">Scripta</span>
+                </td>
+              </tr>
+              <tr>
+                <td><a class="link" target="_blank" href="https://www.wikidata.org/wiki/Property:P571">date of creation</a>
+                </td>
+                <td>yes
+                </td>
+                <td>no
+                </td>
+                <td>Heurist date object
+                </td>
+                <td><a class="link" target="_blank" href="https://www.wikidata.org/wiki/Property:P571">Time when the entity begins to exist.</a>
+                </td>
+                <td>NA
+                </td>
+                <td>NA
+                </td>
+              </tr>
+              <tr>
+                <td>date of creation source
+                </td>
+                <td>yes
+                </td>
+                <td>yes
+                </td>
+                <td>Foreign key
+                </td>
+                <td>Scholarly source attesting to the date of creation.
+                </td>
+                <td><span class="badge-entity">Citation</span>
+                </td>
+                <td>NA
+                </td>
+              </tr>
+              <tr>
+                <td><a class="link" target="_blank" href="https://www.wikidata.org/wiki/Property:P1071">place of creation</a>
+                </td>
+                <td>no
+                </td>
+                <td>no
+                </td>
+                <td>Foriegn key
+                </td>
+                <td><a class="link" target="_blank" href="https://www.wikidata.org/wiki/Property:P1071">Place where the entity was conceived or made.</a>
+                </td>
+                <td><span class="badge-entity">Place</span>
+                </td>
+                <td>NA
+                </td>
+              </tr>
+              <tr>
+                <td>place of creation source
+                </td>
+                <td>yes
+                </td>
+                <td>yes
+                </td>
+                <td>Foreign key
+                </td>
+                <td>Scholarly source attesting to the place of creation.
+                </td>
+                <td><span class="badge-entity">Citation</span>
+                </td>
+                <td>NA
+                </td>
+              </tr>
+            </tbody>
+          </table>
+      </div>
+      <div class="card-header">
+        References
+      </div>
+      <div class="card-text">
+        <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th>Name
+                </th>
+                <th>Required
+                </th>
+                <th>Repeatable
+                </th>
+                <th>Data type
+                </th>
+                <th>Definition
+                </th>
+                <th>Refers to entity
+                </th>
+                <th>Defined by vocabulary
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><a class="link" target="_blank" href="https://www.wikidata.org/wiki/Property:P1343">described by source</a>
+                </td>
+                <td>no
+                </td>
+                <td>yes
+                </td>
+                <td>Foreign key
+                </td>
+                <td>Scholarly source that discusses the entity.
+                </td>
+                <td>
+                  <span class="badge-entity">Citation
+                  </span>
+                </td>
+                <td>NA
+                </td>
+              </tr>
+            </tbody>
+          </table>
+      </div>
+    </div>
+  </div>
