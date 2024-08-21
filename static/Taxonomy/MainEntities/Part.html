@@ -1,0 +1,235 @@
+<link rel="stylesheet" href="/home/kchrist/Dev/heurist-cms-website/css/heurist.css">
+
+<div class="card text-center" data-bs-theme="light">
+    <div class="card-body">
+      <h4 class="card-title" font-size=40px>Definition
+      </h4>
+      <p class="card-text">A sequence of leafs or pages in a <span class="badge-entity">Document</span>, on which is inscribed all or part of the <span class="badge-entity">Witness</span> of a <span class="badge-entity">Text</span>.
+      </p>
+      <h4 class="card-title">Relationships
+      </h4>
+      <p>Relationships that are registered on the <span class="badge">Entity</span> entity itself / originating from it.</p>
+      <ul>
+        <li>Required
+        </li>
+        <ul>
+            <li><span class="badge-entity">Part</span> must relate to 1 <span class="badge-entity">Document</span>, which cannot be hypothetical.</li>
+        </ul>
+        <li>Optional
+        </li>
+      </ul>
+    </div>
+    <div class="card-body">
+      <h4 class="card-title" font-size=40px>Attributes
+      </h4>
+      <div class="card-header">
+        Label Components
+      </div>
+      <div class="card-text">
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th>Name
+              </th>
+              <th>Required
+              </th>
+              <th>Repeatable
+              </th>
+              <th>Data type
+              </th>
+              <th>Definition
+              </th>
+              <th>Refers to entity
+              </th>
+              <th>Defined by vocabulary
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+                <td>is inscribed on
+                </td>
+                <td>yes
+                </td>
+                <td>no
+                </td>
+                <td>Foreign key
+                </td>
+                <td>The physical <span class="badge-entity">Document</span> on which the signs (letters) of a witness's part are inscribed.
+                </td>
+                <td><span class="badge-entity">Document</span>
+                </td>
+                <td>NA
+                </td>
+              </tr>
+              <tr>
+                <td><a class="link" target="_blank" href="https://www.wikidata.org/wiki/Property:P1545">order in series</a>
+                </td>
+                <td>yes
+                </td>
+                <td>no
+                </td>
+                <td>Integer
+                </td>
+                <td><a class="link" target="_blank" href="https://www.wikidata.org/wiki/Property:P1545">Sequential position of the <span class="badge-entity">Part</span> within the <span class="badge-entity">Witness</span>. Default is 1.</a>
+                </td>
+                <td>NA
+                </td>
+                <td>NA
+                </td>
+              </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="card-header">
+        Locus
+      </div>
+      <div class="card-text">
+        <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th>Name
+                </th>
+                <th>Required
+                </th>
+                <th>Repeatable
+                </th>
+                <th>Data type
+                </th>
+                <th>Definition
+                </th>
+                <th>Refers to entity
+                </th>
+                <th>Defined by vocabulary
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>number of verses
+                </td>
+                <td>no
+                </td>
+                <td>no
+                </td>
+                <td>Integer
+                </td>
+                <td>To be compared with the "verse length" of the representative <span class="badge-entity">Text</span>, the number of verses or lines from the <span class="badge-entity">Text</span> represented on this <span class="badge-entity">Part</span> of the <span class="badge-entity">Witness</span>.
+                </td>
+                <td>NA
+                </td>
+                <td>NA
+                </td>
+              </tr>
+              <tr>
+                <td>part of text
+                </td>
+                <td>no
+                </td>
+                <td>no
+                </td>
+                <td>Text (single line)
+                </td>
+                <td>A simple description of the portion of the <span class="badge-entity">Text</span>, i.e. "first third," represented on this <span class="badge-entity">Part</span> of the <span class="badge-entity">Witness</span>. 
+                </td>
+                <td>NA
+                </td>
+                <td>NA
+                </td>
+              </tr>
+              <tr>
+                <td>volume number
+                </td>
+                <td>no
+                </td>
+                <td>no
+                </td>
+                <td>Text (single line)
+                </td>
+                <td>If the <span class="badge-entity">Witness</span> is composed of multiple volumes, the integer, roman numeral, or other indicator used by archival or library catalogues to identify the <span class="badge-entity">Part</span> as a volume of the <span class="badge-entity">Witness</span>.
+                </td>
+                <td>NA
+                </td>
+                <td>NA
+                </td>
+              </tr>
+            </tbody>
+          </table>
+      </div>
+      <div class="card-header">
+        Extent
+      </div>
+      <div class="card-text">
+        <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th>Name
+                </th>
+                <th>Required
+                </th>
+                <th>Repeatable
+                </th>
+                <th>Data type
+                </th>
+                <th>Definition
+                </th>
+                <th>Refers to entity
+                </th>
+                <th>Defined by vocabulary
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>number of lines
+                </td>
+                <td>no
+                </td>
+                <td>no
+                </td>
+                <td>Integer
+                </td>
+                <td>The length of the text as calculated by the number of lines.
+                </td>
+                <td>NA
+                </td>
+                <td>NA
+                </td>
+              </tr>
+              <tr>
+                <td>lines are incomplete
+                </td>
+                <td>yes
+                </td>
+                <td>no
+                </td>
+                <td>Boolean
+                </td>
+                <td>Whether the text lines have been interrupted, i.e. cut (True), or not (False). Default is False.
+                </td>
+                <td>NA
+                </td>
+                <td>NA
+                </td>
+              </tr>
+              <tr>
+                <td>first page | last page
+                </td>
+                <td>yes
+                </td>
+                <td>yes
+                </td>
+                <td>Text (single line)
+                </td>
+                <td>The numbering of the first and last pages of the <span class="badge-entity">Part</span>, separated by the character "|", i.e. "1r|4v".
+                </td>
+                <td>NA
+                </td>
+                <td>NA
+                </td>
+              </tr>
+            </tbody>
+          </table>
+      </div>
+    </div>
+  </div>
