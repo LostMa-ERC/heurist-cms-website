@@ -1,48 +1,181 @@
 <link rel="stylesheet" href="/home/kchrist/Dev/heurist-cms-website/css/heurist.css">
 
 <div class="card text-center" data-bs-theme="light">
-    <div class="card-body">
-      <h4 class="card-title" font-size=40px>Definition
-      </h4>
-      <p class="card-text">Formulation of a 
-        <span class="badge-entity">Work 
-        </span> in human language, whose literary form and style can be detected and whose creation can be attributed to one or more individuals.
-      </p>
-      <h4 class="card-title">Relationships
-      </h4>
-      <p>Relationships that are registered on the <span class="badge-entity">Text</span> entity itself / originating from it.</p>
+  <div class="card-body" id="defCard">
+    <h4 class="card-title" font-size=40px>Definition
+    </h4>
+    <p class="card-text">Formulation of a 
+      <span class="badge-entity">Work 
+      </span> in human language, whose literary form and style can be detected and whose creation can be attributed to one or more individuals.
+    </p>
+    <h4 class="card-title">Relationships
+    </h4>
+    <p>Relationships that are registered on the <span class="badge-entity">Text</span> entity itself / originating from it.</p>
+    <ul>
+      <li>Required
+      </li>
       <ul>
-        <li>Required
-        </li>
-        <ul>
-            <li><span class="badge-entity">Text</span> must relate to 1 <span class="badge-entity">Work</span>.</li>
-            <li><span class="badge-entity">Text</span> must relate to 1 <span class="badge-entity">Genre</span>.</li>
-            <li><span class="badge-entity">Text</span> must be related to 1 term from <span class="badge-vocab">Language</span>.</li>
-        </ul>
-        <li>Optional
-        </li>
-        <ul>
-          <li>
-            <span class="badge-entity">Text
-            </span> can relate to 0, 1, or more
-            <span class="badge-entity">Hypothesis
-            </span>.
-          </li>
-          <li><span class="badge-entity">Text</span> can relate to 0, 1, or more <span class="badge-entity">Text</span>.</li>
-          <li><span class="badge-entity">Text</span> can relate to 0, 1, or more <span class="badge-entity">Person</span>.</li>
-          <li><span class="badge-entity">Text</span> can relate to 0 or 1 <span class="badge-entity">Place</span>.</li>
-          <li><span class="badge-entity">Text</span> can relate to 0, 1, or more <span class="badge-entity">Citation</span>.</li>
-        </ul>
+          <li><span class="badge-entity">Text</span> must relate to 1 <span class="badge-entity">Work</span>.</li>
+          <li><span class="badge-entity">Text</span> must relate to 1 <span class="badge-entity">Genre</span>.</li>
+          <li><span class="badge-entity">Text</span> must be related to 1 term from <span class="badge-vocab">Language</span>.</li>
       </ul>
+      <li>Optional
+      </li>
+      <ul>
+        <li>
+          <span class="badge-entity">Text
+          </span> can relate to 0, 1, or more
+          <span class="badge-entity">Hypothesis
+          </span>.
+        </li>
+        <li><span class="badge-entity">Text</span> can relate to 0, 1, or more <span class="badge-entity">Text</span>.</li>
+        <li><span class="badge-entity">Text</span> can relate to 0, 1, or more <span class="badge-entity">Person</span>.</li>
+        <li><span class="badge-entity">Text</span> can relate to 0 or 1 <span class="badge-entity">Place</span>.</li>
+        <li><span class="badge-entity">Text</span> can relate to 0, 1, or more <span class="badge-entity">Citation</span>.</li>
+      </ul>
+    </ul>
+  </div>   
+</div>
+<div class="card text-center" data-bs-theme="offset">
+  <div class="card-body" id="hypoCard">
+    <h5 class="card-title">Example of Hypothetical Version
+    </h5>
+    <div class="card-text">
+      <p>
+        The oldest <span class="badge-entity">Witness</span> to the <em>chanson de Roland</em> is in the Bodleian library's Digby 23 manuscript, written between 1129 and 1165. Scholars attest that the Anglo-Norman <span class="badge-entity">Text</span> manifest in Digby 23 is based on an older, now-lost <span class="badge-entity">Text</span> written between 1040 and 1115, which probably did not include some of the episodes present in Digby 23, such as the latter's Baligant section.
+      </p>
     </div>
-    <div class="card-body">
-      <h4 class="card-title" font-size=40px>Attributes
-      </h4>
-      <div class="card-header">
-        Label Components
-      </div>
-      <div class="card-text">
-        <table class="table table-bordered">
+    <div class="card-header">
+      <h5><span class="badge-entity">Hypothesis</span> entity</h5>
+    </div>
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>Entity attribute
+          </th>
+          <th>Example description
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>attested object
+          </td>
+          <td>This example; the lost, hypothetical Text. (<span class="badge-entity">Text</span> foreign key)
+          </td>
+        </tr>
+        <tr>
+          <td>real related objects
+          </td>
+          <td>The Text manifest in the Digby 23 Witness. (<span class="badge-entity">Text</span> foreign key)
+          </td>
+        </tr>
+        <tr>
+          <td>claim
+          </td>
+          <td>The Franco-Norman Text of the <em>chanson de Roland</em>, which is manifest in Digby 23, was derived from a hypothetical Text of <em>chanson de Roland</em> that does not have any Witnesses.
+          </td>
+        </tr>
+        <tr>
+          <td>certainty
+          </td>
+          <td>4
+          </td>
+        </tr>
+        <tr>
+          <td>described by source
+          </td>
+          <td>Moisan sIII (<span class="badge-entity">Citation</span> foreign key)
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+<div class="card text-center" data-bs-theme="light">
+  <div class="card-body" id="attCard">
+    <h4 class="card-title" font-size=40px>Attributes
+    </h4>
+    <div class="card-header">
+      Label Components
+    </div>
+    <div class="card-text">
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th>Name
+            </th>
+            <th>Required
+            </th>
+            <th>Repeatable
+            </th>
+            <th>Data type
+            </th>
+            <th>Definition
+            </th>
+            <th>Refers to entity
+            </th>
+            <th>Defined by vocabulary
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>preferred name
+            </td>
+            <td>yes
+            </td>
+            <td>no
+            </td>
+            <td>Text (single line)
+            </td>
+            <td>Received name of the entity in scholarly literature.
+            </td>
+            <td>NA
+            </td>
+            <td>NA
+            </td>
+          </tr>
+          <tr>
+              <td>language
+              </td>
+              <td>yes
+              </td>
+              <td>no
+              </td>
+              <td>Vocabulary
+              </td>
+              <td>Human language through which the creative work is primarily expressed.
+              </td>
+              <td>NA
+              </td>
+              <td><span class="badge-vocab">Language</span>
+              </td>
+            </tr>
+            <tr>
+              <td>form
+              </td>
+              <td>no
+              </td>
+              <td>no
+              </td>
+              <td>Vocabulary
+              </td>
+              <td>Overall form of the literary style (verse, prose, mixed).
+              </td>
+              <td>NA
+              </td>
+              <td><span class="badge-vocab">Form</span>
+              </td>
+            </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="card-header">
+      Hypothesis
+    </div>
+    <div class="card-text">
+      <table class="table table-bordered">
           <thead>
             <tr>
               <th>Name
@@ -63,15 +196,15 @@
           </thead>
           <tbody>
             <tr>
-              <td>preferred name
+              <td>is hypothetical
               </td>
               <td>yes
               </td>
               <td>no
               </td>
-              <td>Text (single line)
+              <td>Boolean
               </td>
-              <td>Received name of the entity in scholarly literature.
+              <td>Whether the entity is attested (True) in a hypothesis or whether it is received as fact that it exists or existed (False). Default is "False."
               </td>
               <td>NA
               </td>
@@ -79,471 +212,395 @@
               </td>
             </tr>
             <tr>
-                <td>language
-                </td>
-                <td>yes
-                </td>
-                <td>no
-                </td>
-                <td>Vocabulary
-                </td>
-                <td>Human language through which the creative work is primarily expressed.
-                </td>
-                <td>NA
-                </td>
-                <td><span class="badge-vocab">Language</span>
-                </td>
-              </tr>
-              <tr>
-                <td>form
-                </td>
-                <td>no
-                </td>
-                <td>no
-                </td>
-                <td>Vocabulary
-                </td>
-                <td>Overall form of the literary style (verse, prose, mixed).
-                </td>
-                <td>NA
-                </td>
-                <td><span class="badge-vocab">Form</span>
-                </td>
-              </tr>
+              <td><a class="link" target="_blank" href="https://www.wikidata.org/wiki/Property:P248">stated in</a>
+              </td>
+              <td>no
+              </td>
+              <td>yes
+              </td>
+              <td>Foreign key
+              </td>
+              <td><a class="link" target="_blank" href="https://www.wikidata.org/wiki/Property:P248">Source in which a claim attesting to the existence of the hypothetical entity is made.</a>
+              </td>
+              <td><span class="badge-entity">Hypothesis</span>
+              </td>
+              <td>NA
+              </td>
+            </tr>
           </tbody>
         </table>
-      </div>
-      <div class="card-header">
-        Hypothesis
-      </div>
-      <div class="card-text">
-        <table class="table table-bordered">
-            <thead>
-              <tr>
-                <th>Name
-                </th>
-                <th>Required
-                </th>
-                <th>Repeatable
-                </th>
-                <th>Data type
-                </th>
-                <th>Definition
-                </th>
-                <th>Refers to entity
-                </th>
-                <th>Defined by vocabulary
-                </th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>is hypothetical
-                </td>
-                <td>yes
-                </td>
-                <td>no
-                </td>
-                <td>Boolean
-                </td>
-                <td>Whether the entity is attested (True) in a hypothesis or whether it is received as fact that it exists or existed (False). Default is "False."
-                </td>
-                <td>NA
-                </td>
-                <td>NA
-                </td>
-              </tr>
-              <tr>
-                <td><a class="link" target="_blank" href="https://www.wikidata.org/wiki/Property:P248">stated in</a>
-                </td>
-                <td>no
-                </td>
-                <td>yes
-                </td>
-                <td>Foreign key
-                </td>
-                <td><a class="link" target="_blank" href="https://www.wikidata.org/wiki/Property:P248">Source in which a claim attesting to the existence of the hypothetical entity is made.</a>
-                </td>
-                <td><span class="badge-entity">Hypothesis</span>
-                </td>
-                <td>NA
-                </td>
-              </tr>
-            </tbody>
-          </table>
-      </div>
-      <div class="card-header">
-        Description
-      </div>
-      <div class="card-text">
-        <table class="table table-bordered">
-            <thead>
-              <tr>
-                <th>Name
-                </th>
-                <th>Required
-                </th>
-                <th>Repeatable
-                </th>
-                <th>Data type
-                </th>
-                <th>Definition
-                </th>
-                <th>Refers to entity
-                </th>
-                <th>Defined by vocabulary
-                </th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td><a class="link" target="_blank" href="https://www.wikidata.org/wiki/Property:P6524">is expression of</a>
-                </td>
-                <td>yes
-                </td>
-                <td>no
-                </td>
-                <td>Foreign key
-                </td>
-                <td><a class="link" target="_blank" href="https://www.wikidata.org/wiki/Property:P6524">Realization of an abstract, creative work through words, sound, image, etc.</a>
-                </td>
-                <td><span class="badge-entity">Work</span>
-                </td>
-                <td>NA
-                </td>
-              </tr>
-              <tr>
-                <td>lost status
-                </td>
-                <td>no
-                </td>
-                <td>no
-                </td>
-                <td>Text (multiple lines)
-                </td>
-                <td>If no <span class="badge-entity">Witness</span> manifests the <span class="badge-entity">Text</span>, notes explaining its lost status.
-                </td>
-                <td>NA
-                </td>
-                <td>NA
-                </td>
-              </tr>
-              <tr>
-                <td><a class="link" target="_blank" href="https://www.wikidata.org/wiki/Property:P4970">alternative names</a>
-                </td>
-                <td>no
-                </td>
-                <td>yes
-                </td>
-                <td>Text (single line)
-                </td>
-                <td><a class="link" target="_blank" href="https://www.wikidata.org/wiki/Property:P4970">Other names that refer to the entity.</a>
-                </td>
-                <td>NA
-                </td>
-                <td>NA
-                </td>
-              </tr>
-              <tr>
-                <td><a class="link" target="_blank" href="https://www.wikidata.org/wiki/Property:P144">is modeled on</a>
-                </td>
-                <td>no
-                </td>
-                <td>yes
-                </td>
-                <td>Foreign key
-                </td>
-                <td><a class="link" target="_blank" href="https://www.wikidata.org/wiki/Property:P144">Work(s) intentionally used as a basis in the entity's creation.</a>
-                </td>
-                <td>
-                  <span class="badge-entity">Text
-                  </span>
-                </td>
-                <td>NA
-                </td>
-              </tr>
-              <tr>
-                <td>secondary matter
-                </td>
-                <td>no
-                </td>
-                <td>yes
-                </td>
-                <td>Vocabulary
-                </td>
-                <td>Matters introduced in this expression (aka version) of the work that are not inherent to the work and all its expressions.
-                </td>
-                <td>NA
-                </td>
-                <td><span class="badge-vocab">Matter</span>
-                </td>
-              </tr>
-              <tr>
-                <td>genre
-                </td>
-                <td>yes
-                </td>
-                <td>no
-                </td>
-                <td>Foreign key
-                </td>
-                <td>Literary genre attributed to the <span class="badge-entity">Text</span>.
-                </td>
-                <td><span class="badge-entity">Genre</span>
-                </td>
-                <td>NA
-                </td>
-              </tr>
-              <tr>
-                <td>poetic meter
-                </td>
-                <td>no
-                </td>
-                <td>no
-                </td>
-                <td>Vocabulary
-                </td>
-                <td>If the <span class="badge-entity">Text</span> is in verse, the type of poetic meter.
-                </td>
-                <td>NA
-                </td>
-                <td><span class="badge-vocab">Meter</span>
-                </td>
-              </tr>
-              <tr>
-                <td>rhyme type
-                </td>
-                <td>no
-                </td>
-                <td>no
-                </td>
-                <td>Vocabulary
-                </td>
-                <td>If the <span class="badge-entity">Text</span> is in verse, the type of rhyme used.
-                </td>
-                <td>NA
-                </td>
-                <td><span class="badge-vocab">Rhyme</span>
-                </td>
-              </tr>
-              <tr>
-                <td>strophe count
-                </td>
-                <td>no
-                </td>
-                <td>no
-                </td>
-                <td>Integer
-                </td>
-                <td>If the <span class="badge-entity">Text</span> is in verse, the number of strophes.
-                </td>
-                <td>NA
-                </td>
-                <td>NA
-                </td>
-              </tr>
-              <tr>
-                <td>strophe length
-                </td>
-                <td>no
-                </td>
-                <td>no
-                </td>
-                <td>Integer
-                </td>
-                <td>If the <span class="badge-entity">Text</span> is in verse, the number of lines in each strophe.
-                </td>
-                <td>NA
-                </td>
-                <td>NA
-                </td>
-              </tr>
-              <tr>
-                <td>verse length
-                </td>
-                <td>no
-                </td>
-                <td>no
-                </td>
-                <td>Integer
-                </td>
-                <td>If the <span class="badge-entity">Text</span> is in verse, the number of verses that a complete version should have.
-                </td>
-                <td>NA
-                </td>
-                <td>NA
-                </td>
-              </tr>
-            </tbody>
-          </table>
-      </div>
-      <div class="card-header">
-        Production
-      </div>
-      <div class="card-text">
-        <table class="table table-bordered">
-            <thead>
-              <tr>
-                <th>Name
-                </th>
-                <th>Required
-                </th>
-                <th>Repeatable
-                </th>
-                <th>Data type
-                </th>
-                <th>Definition
-                </th>
-                <th>Refers to entity
-                </th>
-                <th>Defined by vocabulary
-                </th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>is written by
-                </td>
-                <td>no
-                </td>
-                <td>yes
-                </td>
-                <td>Foreign key
-                </td>
-                <td>The individual accredited with formulating an expression of the creative work.
-                </td>
-                <td><span class="badge-entity">Person</span>
-                </td>
-                <td>NA
-                </td>
-              </tr>
-              <tr>
-                <td>is adapted by
-                </td>
-                <td>no
-                </td>
-                <td>yes
-                </td>
-                <td>Foreign key
-                </td>
-                <td>When the <span class="badge-entity">Text</span> is an adaptation or translation of another <span class="badge-entity">Text</span>, the individual accredited with creating the adaptation.
-                </td>
-                <td><span class="badge-entity">Person</span>
-                </td>
-                <td>NA
-                </td>
-              </tr>
-              <tr>
-                <td><a class="link" target="_blank" href="https://www.wikidata.org/wiki/Property:P571">date of creation</a>
-                </td>
-                <td>yes
-                </td>
-                <td>no
-                </td>
-                <td>Heurist date object
-                </td>
-                <td><a class="link" target="_blank" href="https://www.wikidata.org/wiki/Property:P571">Time when the entity begins to exist.</a>
-                </td>
-                <td>NA
-                </td>
-                <td>NA
-                </td>
-              </tr>
-              <tr>
-                <td>date of creation source
-                </td>
-                <td>yes
-                </td>
-                <td>yes
-                </td>
-                <td>Foreign key
-                </td>
-                <td>Scholarly source attesting to the date of creation.
-                </td>
-                <td><span class="badge-entity">Citation</span>
-                </td>
-                <td>NA
-                </td>
-              </tr>
-              <tr>
-                <td><a class="link" target="_blank" href="https://www.wikidata.org/wiki/Property:P1071">place of creation</a>
-                </td>
-                <td>no
-                </td>
-                <td>no
-                </td>
-                <td>Foriegn key
-                </td>
-                <td><a class="link" target="_blank" href="https://www.wikidata.org/wiki/Property:P1071">Place where the entity was conceived or made.</a>
-                </td>
-                <td><span class="badge-entity">Place</span>
-                </td>
-                <td>NA
-                </td>
-              </tr>
-              <tr>
-                <td>place of creation source
-                </td>
-                <td>yes
-                </td>
-                <td>yes
-                </td>
-                <td>Foreign key
-                </td>
-                <td>Scholarly source attesting to the place of creation.
-                </td>
-                <td><span class="badge-entity">Citation</span>
-                </td>
-                <td>NA
-                </td>
-              </tr>
-            </tbody>
-          </table>
-      </div>
-      <div class="card-header">
-        References
-      </div>
-      <div class="card-text">
-        <table class="table table-bordered">
-            <thead>
-              <tr>
-                <th>Name
-                </th>
-                <th>Required
-                </th>
-                <th>Repeatable
-                </th>
-                <th>Data type
-                </th>
-                <th>Definition
-                </th>
-                <th>Refers to entity
-                </th>
-                <th>Defined by vocabulary
-                </th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td><a class="link" target="_blank" href="https://www.wikidata.org/wiki/Property:P1343">described by source</a>
-                </td>
-                <td>no
-                </td>
-                <td>yes
-                </td>
-                <td>Foreign key
-                </td>
-                <td>Scholarly source that discusses the entity.
-                </td>
-                <td>
-                  <span class="badge-entity">Citation
-                  </span>
-                </td>
-                <td>NA
-                </td>
-              </tr>
-            </tbody>
-          </table>
-      </div>
     </div>
-  </div>
+    <div class="card-header">
+      Description
+    </div>
+    <div class="card-text">
+      <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th>Name
+              </th>
+              <th>Required
+              </th>
+              <th>Repeatable
+              </th>
+              <th>Data type
+              </th>
+              <th>Definition
+              </th>
+              <th>Refers to entity
+              </th>
+              <th>Defined by vocabulary
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><a class="link" target="_blank" href="https://www.wikidata.org/wiki/Property:P6524">is expression of</a>
+              </td>
+              <td>yes
+              </td>
+              <td>no
+              </td>
+              <td>Foreign key
+              </td>
+              <td><a class="link" target="_blank" href="https://www.wikidata.org/wiki/Property:P6524">Realization of an abstract, creative work through words, sound, image, etc.</a>
+              </td>
+              <td><span class="badge-entity">Work</span>
+              </td>
+              <td>NA
+              </td>
+            </tr>
+            <tr>
+              <td>lost status
+              </td>
+              <td>no
+              </td>
+              <td>no
+              </td>
+              <td>Text (multiple lines)
+              </td>
+              <td>If no <span class="badge-entity">Witness</span> manifests the <span class="badge-entity">Text</span>, notes explaining its lost status.
+              </td>
+              <td>NA
+              </td>
+              <td>NA
+              </td>
+            </tr>
+            <tr>
+              <td><a class="link" target="_blank" href="https://www.wikidata.org/wiki/Property:P4970">alternative names</a>
+              </td>
+              <td>no
+              </td>
+              <td>yes
+              </td>
+              <td>Text (single line)
+              </td>
+              <td><a class="link" target="_blank" href="https://www.wikidata.org/wiki/Property:P4970">Other names that refer to the entity.</a>
+              </td>
+              <td>NA
+              </td>
+              <td>NA
+              </td>
+            </tr>
+            <tr>
+              <td><a class="link" target="_blank" href="https://www.wikidata.org/wiki/Property:P144">is modeled on</a>
+              </td>
+              <td>no
+              </td>
+              <td>yes
+              </td>
+              <td>Foreign key
+              </td>
+              <td><a class="link" target="_blank" href="https://www.wikidata.org/wiki/Property:P144">Work(s) intentionally used as a basis in the entity's creation.</a>
+              </td>
+              <td>
+                <span class="badge-entity">Text
+                </span>
+              </td>
+              <td>NA
+              </td>
+            </tr>
+            <tr>
+              <td>secondary matter
+              </td>
+              <td>no
+              </td>
+              <td>yes
+              </td>
+              <td>Vocabulary
+              </td>
+              <td>Matters introduced in this expression (aka version) of the work that are not inherent to the work and all its expressions.
+              </td>
+              <td>NA
+              </td>
+              <td><span class="badge-vocab">Matter</span>
+              </td>
+            </tr>
+            <tr>
+              <td>genre
+              </td>
+              <td>yes
+              </td>
+              <td>no
+              </td>
+              <td>Foreign key
+              </td>
+              <td>Literary genre attributed to the <span class="badge-entity">Text</span>.
+              </td>
+              <td><span class="badge-entity">Genre</span>
+              </td>
+              <td>NA
+              </td>
+            </tr>
+            <tr>
+              <td>poetic meter
+              </td>
+              <td>no
+              </td>
+              <td>no
+              </td>
+              <td>Vocabulary
+              </td>
+              <td>If the <span class="badge-entity">Text</span> is in verse, the type of poetic meter.
+              </td>
+              <td>NA
+              </td>
+              <td><span class="badge-vocab">Meter</span>
+              </td>
+            </tr>
+            <tr>
+              <td>rhyme type
+              </td>
+              <td>no
+              </td>
+              <td>no
+              </td>
+              <td>Vocabulary
+              </td>
+              <td>If the <span class="badge-entity">Text</span> is in verse, the type of rhyme used.
+              </td>
+              <td>NA
+              </td>
+              <td><span class="badge-vocab">Rhyme</span>
+              </td>
+            </tr>
+            <tr>
+              <td>strophe count
+              </td>
+              <td>no
+              </td>
+              <td>no
+              </td>
+              <td>Integer
+              </td>
+              <td>If the <span class="badge-entity">Text</span> is in verse, the number of strophes.
+              </td>
+              <td>NA
+              </td>
+              <td>NA
+              </td>
+            </tr>
+            <tr>
+              <td>strophe length
+              </td>
+              <td>no
+              </td>
+              <td>no
+              </td>
+              <td>Integer
+              </td>
+              <td>If the <span class="badge-entity">Text</span> is in verse, the number of lines in each strophe.
+              </td>
+              <td>NA
+              </td>
+              <td>NA
+              </td>
+            </tr>
+            <tr>
+              <td>verse length
+              </td>
+              <td>no
+              </td>
+              <td>no
+              </td>
+              <td>Integer
+              </td>
+              <td>If the <span class="badge-entity">Text</span> is in verse, the number of verses that a complete version should have.
+              </td>
+              <td>NA
+              </td>
+              <td>NA
+              </td>
+            </tr>
+          </tbody>
+        </table>
+    </div>
+    <div class="card-header">
+      Production
+    </div>
+    <div class="card-text">
+      <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th>Name
+              </th>
+              <th>Required
+              </th>
+              <th>Repeatable
+              </th>
+              <th>Data type
+              </th>
+              <th>Definition
+              </th>
+              <th>Refers to entity
+              </th>
+              <th>Defined by vocabulary
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>is written by
+              </td>
+              <td>no
+              </td>
+              <td>yes
+              </td>
+              <td>Foreign key
+              </td>
+              <td>The individual accredited with formulating an expression of the creative work.
+              </td>
+              <td><span class="badge-entity">Person</span>
+              </td>
+              <td>NA
+              </td>
+            </tr>
+            <tr>
+              <td>is adapted by
+              </td>
+              <td>no
+              </td>
+              <td>yes
+              </td>
+              <td>Foreign key
+              </td>
+              <td>When the <span class="badge-entity">Text</span> is an adaptation or translation of another <span class="badge-entity">Text</span>, the individual accredited with creating the adaptation.
+              </td>
+              <td><span class="badge-entity">Person</span>
+              </td>
+              <td>NA
+              </td>
+            </tr>
+            <tr>
+              <td><a class="link" target="_blank" href="https://www.wikidata.org/wiki/Property:P571">date of creation</a>
+              </td>
+              <td>yes
+              </td>
+              <td>no
+              </td>
+              <td>Heurist date object
+              </td>
+              <td><a class="link" target="_blank" href="https://www.wikidata.org/wiki/Property:P571">Time when the entity begins to exist.</a>
+              </td>
+              <td>NA
+              </td>
+              <td>NA
+              </td>
+            </tr>
+            <tr>
+              <td>date of creation source
+              </td>
+              <td>yes
+              </td>
+              <td>yes
+              </td>
+              <td>Foreign key
+              </td>
+              <td>Scholarly source attesting to the date of creation.
+              </td>
+              <td><span class="badge-entity">Citation</span>
+              </td>
+              <td>NA
+              </td>
+            </tr>
+            <tr>
+              <td><a class="link" target="_blank" href="https://www.wikidata.org/wiki/Property:P1071">place of creation</a>
+              </td>
+              <td>no
+              </td>
+              <td>no
+              </td>
+              <td>Foriegn key
+              </td>
+              <td><a class="link" target="_blank" href="https://www.wikidata.org/wiki/Property:P1071">Place where the entity was conceived or made.</a>
+              </td>
+              <td><span class="badge-entity">Place</span>
+              </td>
+              <td>NA
+              </td>
+            </tr>
+            <tr>
+              <td>place of creation source
+              </td>
+              <td>yes
+              </td>
+              <td>yes
+              </td>
+              <td>Foreign key
+              </td>
+              <td>Scholarly source attesting to the place of creation.
+              </td>
+              <td><span class="badge-entity">Citation</span>
+              </td>
+              <td>NA
+              </td>
+            </tr>
+          </tbody>
+        </table>
+    </div>
+    <div class="card-header">
+      References
+    </div>
+    <div class="card-text">
+      <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th>Name
+              </th>
+              <th>Required
+              </th>
+              <th>Repeatable
+              </th>
+              <th>Data type
+              </th>
+              <th>Definition
+              </th>
+              <th>Refers to entity
+              </th>
+              <th>Defined by vocabulary
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><a class="link" target="_blank" href="https://www.wikidata.org/wiki/Property:P1343">described by source</a>
+              </td>
+              <td>no
+              </td>
+              <td>yes
+              </td>
+              <td>Foreign key
+              </td>
+              <td>Scholarly source that discusses the entity.
+              </td>
+              <td>
+                <span class="badge-entity">Citation
+                </span>
+              </td>
+              <td>NA
+              </td>
+            </tr>
+          </tbody>
+        </table>
+    </div>
+</div>
