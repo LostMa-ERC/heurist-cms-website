@@ -29,51 +29,150 @@
     </h5>
     <div class="card-text">
       <p>
-        ...
+        Fragments from the Anglo-Norman texts of the <em>chanson d'Otinel</em> (M) and <em>chanson d'Aspremont</em> (P4) are currently conserved in a collection of fragments at the Bibliothèque nationale de France, under the shelfmark NAF 5094. There is another fragmentary witness (C) of the same Anglo-Norman <em>chanson d'Aspremont</em> text in a different document, I F2, in the Clermont Ferrand archives départementales.
+        Scholars have argued that the two fragments of <em>chanson d'Aspremont</em> (P4, C) were originally created as one, representing different parts of the same text. Furthermore, the fragment of <em>chanson d'Otinel</em> (M), which was discovered and conserved with that of <em>chanson d'Aspremont</em> in BNF NAF 5094, was also originally part of the same manuscript that had the complete <em>chanson d'Aspremont</em>.
+      </p>
+      <p>
+        To recognize that these witnesses (M, P4, C) were originally transmitted in the same document, create a <span class="badge-entity">Document</span> entity and set the attribute "is hypothetical" to "True." Then, link the <span class="badge-entity">Witness</span> entities to the hypothetical <span class="badge-entity">Document</span>. They will then each be linked to two <span class="badge-entity">Document</span> entities, one real, by which they can be consulted, and the other attested, which supports an historical hypothesis.
       </p>
     </div>
     <div class="card-header">
-      <h5><span class="badge-entity">Hypothesis</span> entity</h5>
+      <h5><span class="badge-entity">Document</span> entity (hypothetical)</h5>
     </div>
     <table class="table table-bordered">
       <thead>
         <tr>
-          <th>Entity attribute
-          </th>
-          <th>Example description
-          </th>
+          <th>Entity attribute</th>
+          <th>Example description</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td>attested object
-          </td>
-          <td>This example; the lost, hypothetical Document. (<span class="badge-entity">Document</span> foreign key)
-          </td>
+          <td>current shelfmark</td>
+          <td>NA</td>
         </tr>
         <tr>
-          <td>real related objects
-          </td>
-          <td>... (<span class="badge-entity">Witness</span> foreign key)
-          </td>
+          <td>is conserved in</td>
+          <td>NA</td>
         </tr>
         <tr>
-          <td>claim
-          </td>
-          <td>...
-          </td>
+          <td>invented label</td>
+          <td>Paris, BNF NAF 5094, part II + (?) Clermont-Ferrand, I F2</td>
         </tr>
         <tr>
-          <td>certainty
-          </td>
-          <td>...
-          </td>
+          <td>is hypothetical</td>
+          <td>True</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="card-header">
+      <h5><span class="badge-entity">Witness</span> entity (M)</h5>
+    </div>
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>Entity attribute</th>
+          <th>Example description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>preferred siglum</td>
+          <td>M</td>
         </tr>
         <tr>
-          <td>described by source
-          </td>
-          <td>... (<span class="badge-entity">Citation</span> foreign key)
-          </td>
+          <td>is manifestation of</td>
+          <td>Anglo-Norman <em>chanson d'Otinel</em> (<span class="badge-entity">Text</span> foreign key)</td>
+        </tr>
+        <tr>
+          <td>has part</td>
+          <td>Pages 7r-7v in the BNF NAF 5094 (<span class="badge-entity">Part</span> foreign key)</td>
+        </tr>
+        <tr>
+          <td>is preceded by witness</td>
+          <td>NA</td>
+        </tr>
+        <tr>
+          <td>was part of</td>
+          <td>Hypothetical document (<span class="badge-entity">Document</span> foreign key)</td>
+        </tr>
+        <tr>
+          <td>is preceded by fragment</td>
+          <td>NA</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="card-header">
+      <h5><span class="badge-entity">Witness</span> entity (P4)</h5>
+    </div>
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>Entity attribute</th>
+          <th>Example description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>preferred siglum</td>
+          <td>P4</td>
+        </tr>
+        <tr>
+          <td>is manifestation of</td>
+          <td>Anglo-Norman <em>chanson d'Aspremont</em> (<span class="badge-entity">Text</span> foreign key)</td>
+        </tr>
+        <tr>
+          <td>has part</td>
+          <td>Pages 8r-8v in the BNF NAF 5094 (<span class="badge-entity">Part</span> foreign key)</td>
+        </tr>
+        <tr>
+          <td>is preceded by witness</td>
+          <td>The fragment from the <em>chanson d'Otinel</em>, which originally preceded the witness of the <em>chanson d'Aspremont</em> in the historical, hypothetical document. (<span class="badge-entity">Witness</span> foreign key)</td>
+        </tr>
+        <tr>
+          <td>was part of</td>
+          <td>Hypothetical document (<span class="badge-entity">Document</span> foreign key)</td>
+        </tr>
+        <tr>
+          <td>is preceded by fragment</td>
+          <td>NA</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="card-header">
+      <h5><span class="badge-entity">Witness</span> entity (C)</h5>
+    </div>
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>Entity attribute</th>
+          <th>Example description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>preferred siglum</td>
+          <td>C</td>
+        </tr>
+        <tr>
+          <td>is manifestation of</td>
+          <td>Anglo-Norman <em>chanson d'Aspremont</em> (<span class="badge-entity">Text</span> foreign key)</td>
+        </tr>
+        <tr>
+          <td>has part</td>
+          <td>Pages 1r-2a in the Clermont-Ferrand, I F2 (<span class="badge-entity">Part</span> foreign key)</td>
+        </tr>
+        <tr>
+          <td>is preceded by witness</td>
+          <td>NA</td>
+        </tr>
+        <tr>
+          <td>was part of</td>
+          <td>Hypothetical document (<span class="badge-entity">Document</span> foreign key)</td>
+        </tr>
+        <tr>
+          <td>is preceded by fragment</td>
+          <td>The fragment of <em>chanson d'Aspremont</em> that presents an earlier part of the text and, therefore, preceded this fragment in the historical, hypothetical document. (<span class="badge-entity">Witness</span> foreign key)</td>
         </tr>
       </tbody>
     </table>
