@@ -44,9 +44,9 @@
         According to a fourteenth-century inventory of a library at the Abbey of Peterborough, there was a Witness to the French Text <em>chanson d'Otinel</em> in the monks' collection; however, the inventoried manuscript no longer exists.
       </p>
       <p>
-        When creating the <span class="badge-entity">Witness</span> entity, set "is hypothetical" to "True" and link the entity to a <span class="badge-entity">Hypothesis</span>, shown below, that details the claim attesting to the lost <em>chanson d'Otinel</em> witness's existence. Optionally, in the hypothesis, you can draw connections in the database between the claim and the real <span class="badge-entity">Text</span>, which has other real witnesses.
-        The hypothetical <span class="badge-entity">Witness</span> can be related to more than one <span class="badge-entity">Hypothesis</span>, which draws on its own related real objects and sources of information to make the argument.
-      </p>
+        When creating the <span class="badge-entity">Witness</span> entity, set "is hypothetical" to "True" and create a <span class="badge-entity">Hypothesis</span> entity, shown below, that links to the lost <em>chanson d'Otinel</em> and details the claim attesting to its existence.
+        The hypothetical <span class="badge-entity">Witness</span> can be related to more than one <span class="badge-entity">Hypothesis</span>, which has its own degree of certainty and draws on its own sources of information to make the argument.
+        </p>
     </div>
     <div class="card-header">
       <h5><span class="badge-entity">Hypothesis</span> entity</h5>
@@ -65,12 +65,6 @@
           <td>attested object
           </td>
           <td>This example; the lost, hypothetical Witness. (<span class="badge-entity">Witness</span> foreign key)
-          </td>
-        </tr>
-        <tr>
-          <td>real related objects
-          </td>
-          <td>The <em>chanson d'Otinel</em> Text attested to have been manifested in the hypothetical Witness. (<span class="badge-entity">Text</span> foreign key)
           </td>
         </tr>
         <tr>
@@ -210,22 +204,6 @@
               <td>Whether the entity is attested (True) in a hypothesis or whether it is received as fact that it exists or existed (False). Default is "False."
               </td>
               <td>NA
-              </td>
-              <td>NA
-              </td>
-            </tr>
-            <tr>
-              <td><a class="link" target="_blank" href="https://www.wikidata.org/wiki/Property:P248">stated in</a>
-              </td>
-              <td>no
-              </td>
-              <td>yes
-              </td>
-              <td>Foreign key
-              </td>
-              <td><a class="link" target="_blank" href="https://www.wikidata.org/wiki/Property:P248">Source in which a claim attesting to the existence of the hypothetical entity is made.</a>
-              </td>
-              <td><span class="badge-entity">Hypothesis</span>
               </td>
               <td>NA
               </td>

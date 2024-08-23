@@ -34,6 +34,7 @@
       </p>
       <p>
         To recognize that these witnesses (M, P4, C) were originally transmitted in the same document, create a <span class="badge-entity">Document</span> entity and set the attribute "is hypothetical" to "True." Then, link the <span class="badge-entity">Witness</span> entities to the hypothetical <span class="badge-entity">Document</span>. They will then each be linked to two <span class="badge-entity">Document</span> entities, one real, by which they can be consulted, and the other attested, which supports an historical hypothesis.
+        Lastly, to document the argument or arguments attesting to the hypothetical manuscript's existence, create a <span class="badge-entity">Hypothesis</span> entity and link it to the <span class="badge-entity">Document</span> that has "is hypothetical" set to "False."
       </p>
     </div>
     <div class="card-header">
@@ -293,22 +294,6 @@
                   <td>Whether the entity is attested (True) in a hypothesis or whether it is received as fact that it exists or existed (False). Default is "False."
                   </td>
                   <td>NA
-                  </td>
-                  <td>NA
-                  </td>
-                </tr>
-                <tr>
-                  <td><a class="link" target="_blank" href="https://www.wikidata.org/wiki/Property:P248">stated in</a>
-                  </td>
-                  <td>no
-                  </td>
-                  <td>yes
-                  </td>
-                  <td>Foreign key
-                  </td>
-                  <td><a class="link" target="_blank" href="https://www.wikidata.org/wiki/Property:P248">Source in which a claim attesting to the existence of the hypothetical entity is made.</a>
-                  </td>
-                  <td><span class="badge-entity">Hypothesis</span>
                   </td>
                   <td>NA
                   </td>
