@@ -4,11 +4,11 @@
   <div class="card-body">
     <h4 class="card-title" font-size=40px>Definition
     </h4>
-    <p class="card-text">Definition of entity.
+    <p class="card-text">Category of literary work.
     </p>
     <h4 class="card-title">Relationships
     </h4>
-    <p>Relationships that are registered on the <span class="badge-entity">Entity</span> entity itself / originating from it.</p>
+    <p>Relationships that are registered on the <span class="badge-entity">Subgenre</span> entity itself / originating from it.</p>
     <ul>
       <li>Required
       </li>
@@ -46,19 +46,35 @@
         </thead>
         <tbody>
           <tr>
-            <td>LABEL
+            <td>preferred name
             </td>
-            <td>REQUIRED
+            <td>yes
             </td>
-            <td>REPEATABLE
+            <td>no
             </td>
-            <td>DATATYPE
+            <td>Text (single line)
             </td>
-            <td>DESCRIPTION
+            <td>Received name of the entity.
+            </td>
+            <td>NA
             </td>
             <td>NA
             </td>
-            <td>NA
+          </tr>
+          <tr>
+            <td>parent genre
+            </td>
+            <td>no
+            </td>
+            <td>yes
+            </td>
+            <td>Foreign key
+            </td>
+            <td>A broader category of literary composition to which this subgenre belongs.
+            </td>
+            <td><span class="badge-entity">Genre</span>
+            </td>
+            <td>
             </td>
           </tr>
         </tbody>
@@ -89,15 +105,31 @@
         </thead>
         <tbody>
           <tr>
-            <td>LABEL
+            <td>description
             </td>
-            <td>REQUIRED
+            <td>yes
             </td>
-            <td>REPEATABLE
+            <td>no
             </td>
-            <td>DATATYPE
+            <td>Text (multiple lines)
             </td>
-            <td>DESCRIPTION
+            <td>Explanation of what defines the entity.
+            </td>
+            <td>NA
+            </td>
+            <td>NA
+            </td>
+          </tr>
+          <tr>
+            <td>archetype
+            </td>
+            <td>no
+            </td>
+            <td>yes
+            </td>
+            <td>Text (single line)
+            </td>
+            <td>Reference to an archetypical example of the entity.
             </td>
             <td>NA
             </td>

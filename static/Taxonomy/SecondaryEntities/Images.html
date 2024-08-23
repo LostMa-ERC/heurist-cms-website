@@ -4,14 +4,18 @@
   <div class="card-body">
     <h4 class="card-title" font-size=40px>Definition
     </h4>
-    <p class="card-text">Definition of entity.
+    <p class="card-text">A range of image files from a <span class="badge-entity">Digitization</span>, which correspond to a discrete, uninterrupted series of pages or leafs of a <span class="badge-entity">Part</span> of a <span class="badge-entity">Document</span>.
     </p>
     <h4 class="card-title">Relationships
     </h4>
-    <p>Relationships that are registered on the <span class="badge-entity">Entity</span> entity itself / originating from it.</p>
+    <p>Relationships that are registered on the <span class="badge-entity">Images</span> entity itself / originating from it.</p>
     <ul>
       <li>Required
       </li>
+      <ul>
+        <li><span class="badge-entity">Images</span> must relate to 1 <span class="badge-entity">Part</span></li>
+        <li><span class="badge-entity">Images</span> must relate to 1 <span class="badge-entity">Digitization</span></li>
+      </ul>
       <li>Optional
       </li>
     </ul>
@@ -46,17 +50,33 @@
         </thead>
         <tbody>
           <tr>
-            <td>LABEL
+            <td>presents
             </td>
-            <td>REQUIRED
+            <td>yes
             </td>
-            <td>REPEATABLE
+            <td>no
             </td>
-            <td>DATATYPE
+            <td>Foreign key
             </td>
-            <td>DESCRIPTION
+            <td>The portion of the document represented in the digitized images.
+            </td>
+            <td><span class="badge-entity">Part</span>
             </td>
             <td>NA
+            </td>
+          </tr>
+          <tr>
+            <td>contained in
+            </td>
+            <td>yes
+            </td>
+            <td>no
+            </td>
+            <td>Foreign key
+            </td>
+            <td>The digital object, which has a URL, from which this discrete range of images comes.
+            </td>
+            <td><span class="badge-entity">Digitization</span>
             </td>
             <td>NA
             </td>
@@ -89,62 +109,33 @@
         </thead>
         <tbody>
           <tr>
-            <td>LABEL
-            </td>
-            <td>REQUIRED
-            </td>
-            <td>REPEATABLE
-            </td>
-            <td>DATATYPE
-            </td>
-            <td>DESCRIPTION
-            </td>
-            <td>NA
-            </td>
-            <td>NA
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-    <div class="card-header">
-      References
-    </div>
-    <div class="card-text">
-      <table class="table table-bordered">
-        <thead>
-          <tr>
-            <th>Name
-            </th>
-            <th>Required
-            </th>
-            <th>Repeatable
-            </th>
-            <th>Data type
-            </th>
-            <th>Definition
-            </th>
-            <th>Refers to entity
-            </th>
-            <th>Defined by vocabulary
-            </th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><a class="link" target="_blank" href="https://www.wikidata.org/wiki/Property:P1343">described by source</a>
-            </td>
-            <td>no
+            <td>first view | last view
             </td>
             <td>yes
             </td>
-            <td>Foreign key
+            <td>no
             </td>
-            <td>Scholarly source that discusses the entity.
+            <td>Text (single line)
             </td>
-            <td>
-              <span class="badge-entity">Citation
-              </span>
+            <td>The index of the first and last image file in the series of <span class="badge-entity">Images</span>, , separated by the character "|", i.e. "4|725".
+            </td>
+            <td>NA
+            </td>
+            <td>NA
+            </td>
+          </tr>
+          <tr>
+            <td>corresponding first page | last page
+            </td>
+            <td>yes
+            </td>
+            <td>no
+            </td>
+            <td>Text (single line)
+            </td>
+            <td>The numbering of the first and last pages of the <span class="Part"></span>, separated by the character "|", i.e. "1r|359v". 
+            </td>
+            <td>NA
             </td>
             <td>NA
             </td>
