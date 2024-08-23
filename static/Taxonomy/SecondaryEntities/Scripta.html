@@ -4,18 +4,18 @@
   <div class="card-body">
     <h4 class="card-title" font-size=40px>Definition
     </h4>
-    <p class="card-text">The category of a literary work, which can be broad (genre) or specific (subgenre).
+    <p class="card-text">The regional writing style, similar to the written version of a spoken dialect, as defined by <a class="link" target="_blank" href="https://doi.org/10.4000/books.pulg.347">Louis Remacle</a>..
     </p>
     <h4 class="card-title">Relationships
     </h4>
-    <p>Relationships that are registered on the <span class="badge-entity">Genre</span> entity itself / originating from it.</p>
+    <p>Relationships that are registered on the <span class="badge-entity">Scripta</span> entity itself / originating from it.</p>
     <ul>
       <li>Required
       </li>
       <li>Optional
       </li>
       <ul>
-        <li><span class="badge-entity">Genre</span> can relate to 0, 1, or many <span class="badge-entity">Citation</span></li>
+        <li><span class="badge-entity">Scripta</span> can relate to 0, 1, or many <span class="badge-entity">Citation</span></li>
       </ul>
     </ul>
   </div>
@@ -64,22 +64,6 @@
             <td>NA
             </td>
           </tr>
-          <tr>
-            <td>parent genre
-            </td>
-            <td>no
-            </td>
-            <td>yes
-            </td>
-            <td>Foreign key
-            </td>
-            <td>A broader category of literary composition to which this subgenre belongs.
-            </td>
-            <td><span class="badge-entity">Genre</span>
-            </td>
-            <td>
-            </td>
-          </tr>
         </tbody>
       </table>
     </div>
@@ -124,17 +108,17 @@
             </td>
           </tr>
           <tr>
-            <td>archetype
+            <td>region
             </td>
             <td>no
             </td>
-            <td>yes
+            <td>no
             </td>
-            <td>Text (single line)
+            <td>Foreign key
             </td>
-            <td>Reference to an archetypical example of the entity.
+            <td>Region in which the entity is primarily located.
             </td>
-            <td>NA
+            <td><span class="badge-entity">Place</span>
             </td>
             <td>NA
             </td>
