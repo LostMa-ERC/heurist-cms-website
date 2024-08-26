@@ -118,7 +118,7 @@
         </thead>
         <tbody>
           <tr>
-              <td><a class="link" target="_blank" href="https://www.wikidata.org/wiki/Property:P1557">is manifestation of</a>
+              <td><a class="link" target="_blank" href="https://www.wikidata.org/wiki/Property:P1557">manifests</a>
               </td>
               <td>yes
               </td>
@@ -208,6 +208,54 @@
               <td>NA
               </td>
             </tr>
+            <tr>
+              <td>was part of hypo doc
+              </td>
+              <td>no
+              </td>
+              <td>yes
+              </td>
+              <td>Foreign key
+              </td>
+              <td>If it is known or attested that the <span class="badge-entity">Witness</span> was once part of a <span class="badge-entity">Document</span> that is now lost or destroyed, the hypothetical <span class="badge-entity">Document</span>.
+              </td>
+              <td><span class="badge-entity">Document</span>
+              </td>
+              <td>NA
+              </td>
+            </tr>
+            <tr>
+              <td>followed fragment in hypo doc
+              </td>
+              <td>no
+              </td>
+              <td>no
+              </td>
+              <td>Foreign key
+              </td>
+              <td>If the <span class="badge-entity">Witness</span> is of <span class="badge-vocab">Status</span> "fragment", another fragment of the same <span class="badge-entity">Text</span> and from the same codicological unit that represents an earlier part of the <span class="badge-entity">Text</span>, so that this entity and the linked entity would constitute two sequential parts of one composite <span class="badge-entity">Witness</span>.
+              </td>
+              <td><span class="badge-entity">Witness</span>
+              </td>
+              <td>NA
+              </td>
+            </tr>
+            <tr>
+              <td>followed witness in hypo doc
+              </td>
+              <td>no
+              </td>
+              <td>no
+              </td>
+              <td>Foreign key
+              </td>
+              <td>If the <span class="badge-entity">Witness</span> was originally with another <span class="badge-entity">Witness</span>, especially the <span class="badge-entity">Witness</span> of a different <span class="badge-entity">Text</span>, in a now lost or disassembled <span class="badge-entity">Document</span>, the <span class="badge-entity">Witness</span> that immediately preceded it in the hypothetical <span class="badge-entity">Document</span>.
+              </td>
+              <td><span class="badge-entity">Witness</span>
+              </td>
+              <td>NA
+              </td>
+            </tr>
           </tbody>
         </table>
     </div>
@@ -279,54 +327,6 @@
               <td>The <span class="badge-entity">Witness</span> does not seek to fully manifest the <span class="badge-entity">Text</span> but rather makes reference to it in a different literary context.
               </td>
               <td>NA
-              </td>
-              <td>NA
-              </td>
-            </tr>
-            <tr>
-              <td>was preceded by fragment
-              </td>
-              <td>no
-              </td>
-              <td>no
-              </td>
-              <td>Foreign key
-              </td>
-              <td>If the <span class="badge-entity">Witness</span> is of <span class="badge-vocab">Status</span> "fragment", another fragment of the same <span class="badge-entity">Text</span> and from the same codicological unit that represents an earlier part of the <span class="badge-entity">Text</span>, so that this entity and the linked entity would constitute two sequential parts of one composite <span class="badge-entity">Witness</span>.
-              </td>
-              <td><span class="badge-entity">Witness</span>
-              </td>
-              <td>NA
-              </td>
-            </tr>
-            <tr>
-              <td>was part of
-              </td>
-              <td>no
-              </td>
-              <td>yes
-              </td>
-              <td>Foreign key
-              </td>
-              <td>If it is known or attested that the <span class="badge-entity">Witness</span> was once part of a <span class="badge-entity">Document</span> that is now lost or destroyed, the hypothetical <span class="badge-entity">Document</span>.
-              </td>
-              <td><span class="badge-entity">Document</span>
-              </td>
-              <td>NA
-              </td>
-            </tr>
-            <tr>
-              <td>was preceded by witness
-              </td>
-              <td>no
-              </td>
-              <td>no
-              </td>
-              <td>Foreign key
-              </td>
-              <td>If the <span class="badge-entity">Witness</span> was originally with another <span class="badge-entity">Witness</span>, especially the <span class="badge-entity">Witness</span> of a different <span class="badge-entity">Text</span>, in a now lost or disassembled <span class="badge-entity">Document</span>, the <span class="badge-entity">Witness</span> that immediately preceded it in the hypothetical <span class="badge-entity">Document</span>.
-              </td>
-              <td><span class="badge-entity">Witness</span>
               </td>
               <td>NA
               </td>
