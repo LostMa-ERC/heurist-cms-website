@@ -4,7 +4,7 @@
   <div class="card-body">
     <h4 class="card-title" font-size=40px>Definition
     </h4>
-    <p class="card-text">The regional writing style, similar to the written version of a spoken dialect, as defined by <a class="link" target="_blank" href="https://doi.org/10.4000/books.pulg.347">Louis Remacle</a>..
+    <p class="card-text">The regional writing style, similar to the written version of a spoken dialect, as defined by <a class="link" target="_blank" href="https://doi.org/10.4000/books.pulg.347">Louis Remacle</a>.
     </p>
     <h4 class="card-title">Relationships
     </h4>
@@ -12,9 +12,13 @@
     <ul>
       <li>Required
       </li>
+      <ul>
+        <li><span class="badge-entity">Scripta</span> must relate to 1 term from <span class="badge-vocab">Language</span></li>
+      </ul>
       <li>Optional
       </li>
       <ul>
+        <li><span class="badge-entity">Scripta</span> can relate to 0 or 1 <span class="badge-entity">Place</span></li>
         <li><span class="badge-entity">Scripta</span> can relate to 0, 1, or many <span class="badge-entity">Citation</span></li>
       </ul>
     </ul>
@@ -105,6 +109,22 @@
             <td>NA
             </td>
             <td>NA
+            </td>
+          </tr>
+          <tr>
+            <td>language
+            </td>
+            <td>yes
+            </td>
+            <td>no
+            </td>
+            <td>Vocabulary
+            </td>
+            <td>Human language through which the entity is primarily expressed.
+            </td>
+            <td>NA
+            </td>
+            <td><span class="badge-vocab">Language</span>
             </td>
           </tr>
           <tr>
