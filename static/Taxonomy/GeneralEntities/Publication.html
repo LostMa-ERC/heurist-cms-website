@@ -1,0 +1,347 @@
+<link rel="stylesheet" href="../../../css/heurist.css">
+
+<div class="card text-center" data-bs-theme="light" id="defCard">
+  <div class="card-body">
+    <h4 class="card-title" font-size=40px>Definition
+    </h4>
+    <p class="card-text">Reference in a scholarly publication.
+    </p>
+  </div>
+</div>
+<div class="card text-center" data-bs-theme="light" id="attCard">
+  <div class="card-body">
+    <h4 class="card-title" font-size=40px>Attributes
+    </h4>
+    <div class="card-text">
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th>Name
+            </th>
+            <th>Definition
+            </th>
+            <th>Data type
+            </th>
+            <th>Repeatable
+            </th>
+            <th>Necessity
+            </th>
+            <th>Refers to entity
+            </th>
+            <th>Defined by vocabulary
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>author
+            </td>
+            <td>Name of the individual or organization responsible for the work.<br>
+              Format = Family name, Given name
+            </td>
+            <td>Text (single line)
+            </td>
+            <td>Yes
+            </td>
+            <td>Required
+            </td>
+            <td>NA
+            </td>
+            <td>NA
+            </td>
+          </tr>
+          <tr>
+            <td>publication_year
+            </td>
+            <td>Publication year.
+            </td>
+            <td>Date temporal
+            </td>
+            <td>No
+            </td>
+            <td>Required
+            </td>
+            <td>NA
+            </td>
+            <td>NA
+            </td>
+          </tr>
+          <tr>
+            <td>title
+            </td>
+            <td>Title of the book or article.
+            </td>
+            <td>Text (single line)
+            </td>
+            <td>No
+            </td>
+            <td>Required
+            </td>
+            <td>NA
+            </td>
+            <td>NA
+            </td>
+          </tr>
+          <tr>
+            <td>short_label
+            </td>
+            <td>Shortened title (or author's name) for the purposes of constructing a more-user friendly label for this record.
+            </td>
+            <td>Text (single line)
+            </td>
+            <td>No
+            </td>
+            <td>Required
+            </td>
+            <td>NA
+            </td>
+            <td>NA
+            </td>
+          </tr>
+          <tr>
+            <td>book_volume
+            </td>
+            <td>If the book was published in a series, the volume number of the book.
+            </td>
+            <td>Integer
+            </td>
+            <td>No
+            </td>
+            <td>Optional
+            </td>
+            <td>NA
+            </td>
+            <td>NA
+            </td>
+          </tr>
+          <tr>
+            <td>edition_number
+            </td>
+            <td>The number of the edition of a book.
+            </td>
+            <td>Text (single line)
+            </td>
+            <td>No
+            </td>
+            <td>Optional
+            </td>
+            <td>NA
+            </td>
+            <td>NA
+            </td>
+          </tr>
+          <tr>
+            <td>publisher_name
+            </td>
+            <td>Name of the publisher responsible for the edition of the source.
+            </td>
+            <td>Text (single line)
+            </td>
+            <td>No
+            </td>
+            <td>Optional
+            </td>
+            <td>NA
+            </td>
+            <td>NA
+            </td>
+          </tr>
+          <tr>
+            <td>publisher_place
+            </td>
+            <td>Place of publication.
+            </td>
+            <td>Text (single line)
+            </td>
+            <td>No
+            </td>
+            <td>Optional
+            </td>
+            <td>NA
+            </td>
+            <td>NA
+            </td>
+          </tr>
+          <tr>
+            <td>URL
+            </td>
+            <td>The URL(s) of resources or web pages relating to the current record. Include http:// or https://<br>
+              If there is a primary URL, turn on the special URL field in the record type definition (Attributes) form., which will become a hotlink.
+            </td>
+            <td>Text (single line)
+            </td>
+            <td>No
+            </td>
+            <td>Recommended
+            </td>
+            <td>NA
+            </td>
+            <td>NA
+            </td>
+          </tr>
+          <tr>
+            <td>DOI
+            </td>
+            <td>Digital Object Identifier (DOI) of the item.
+            </td>
+            <td>Text (single line)
+            </td>
+            <td>No
+            </td>
+            <td>Recommended
+            </td>
+            <td>NA
+            </td>
+            <td>NA
+            </td>
+          </tr>
+          <tr>
+            <td>ISBN
+            </td>
+            <td>International Standard Book Numbering (ISBN) identification of this document.
+            </td>
+            <td>Text (single line)
+            </td>
+            <td>Yes
+            </td>
+            <td>Recommended
+            </td>
+            <td>NA
+            </td>
+            <td>NA
+            </td>
+          </tr>
+          <tr>
+            <td>bibtex_citation
+            </td>
+            <td>A BiBTeX-formatted citation of the source of information.
+            </td>
+            <td>Text (multi-line)
+            </td>
+            <td>No
+            </td>
+            <td>Optional
+            </td>
+            <td>NA
+            </td>
+            <td>NA
+            </td>
+          </tr>
+          <tr>
+            <td>journal_title
+            </td>
+            <td>Title of the journal.
+            </td>
+            <td>Text (single line)
+            </td>
+            <td>No
+            </td>
+            <td>Recommended
+            </td>
+            <td>NA
+            </td>
+            <td>NA
+            </td>
+          </tr>
+          <tr>
+            <td>journal_volume
+            </td>
+            <td>The number of the volume within the journal's series of issues.
+            </td>
+            <td>Text (single line)
+            </td>
+            <td>No
+            </td>
+            <td>Recommended
+            </td>
+            <td>NA
+            </td>
+            <td>NA
+            </td>
+          </tr>
+          <tr>
+            <td>book_title
+            </td>
+            <td>If the source of information is a chapter in a book, the title of the book.
+            </td>
+            <td>Text (single line)
+            </td>
+            <td>No
+            </td>
+            <td>Recommended
+            </td>
+            <td>NA
+            </td>
+            <td>NA
+            </td>
+          </tr>
+          <tr>
+            <td>series_title
+            </td>
+            <td>Title of the series that published this record.
+            </td>
+            <td>Text (single line)
+            </td>
+            <td>No
+            </td>
+            <td>Recommended
+            </td>
+            <td>NA
+            </td>
+            <td>NA
+            </td>
+          </tr>
+          <tr>
+            <td>editor_name
+            </td>
+            <td>Name of the editor of the journal or book.<br>
+              Format = Given name + Family name
+            </td>
+            <td>Text (single line)
+            </td>
+            <td>Yes
+            </td>
+            <td>Recommended
+            </td>
+            <td>NA
+            </td>
+            <td>NA
+            </td>
+          </tr>
+          <tr>
+            <td>first_page
+            </td>
+            <td>First page of the article or book chapter.
+            </td>
+            <td>Text (single line)
+            </td>
+            <td>No
+            </td>
+            <td>Recommended
+            </td>
+            <td>NA
+            </td>
+            <td>NA
+            </td>
+          </tr>
+          <tr>
+            <td>last_page
+            </td>
+            <td>Last page of the article or book chapter.
+            </td>
+            <td>Text (single line)
+            </td>
+            <td>No
+            </td>
+            <td>Recommended
+            </td>
+            <td>NA
+            </td>
+            <td>NA
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

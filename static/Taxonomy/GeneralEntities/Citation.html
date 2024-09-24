@@ -4,20 +4,8 @@
   <div class="card-body">
     <h4 class="card-title" font-size=40px>Definition
     </h4>
-    <p class="card-text">A discrete geographic region within the scope of a country.
+    <p class="card-text">Reference in an online database or the digital catalogue of a library or archive.
     </p>
-    <h4 class="card-title">Relationships
-    </h4>
-    <p>Relationships that are registered on the <span class="badge-entity">Place</span> entity itself / originating from it.</p>
-    <ul>
-      <li>Required
-      </li>
-      <ul>
-        <li><span class="badge-entity">Place</span> must relate to 1 term from <span class="badge-vocab">Place type</span></li>
-      </ul>
-      <li>Optional
-      </li>
-    </ul>
   </div>
 </div>
 <div class="card text-center" data-bs-theme="light" id="attCard">
@@ -46,15 +34,47 @@
         </thead>
         <tbody>
           <tr>
-            <td>place_name
+            <td>information_source
             </td>
-            <td>Commonly used name of the place. Do not abbreviate or use hierarchichal naming (put that under country, state etc.)
+            <td>Source of the cited information.
+            </td>
+            <td>Foreign key
+            </td>
+            <td>No
+            </td>
+            <td>Required
+            </td>
+            <td><span class="badge-entity">Publication</span> <span class="badge-entity">Database</span> <span class="badge-entity">Repository</span>
+            </td>
+            <td>NA
+            </td>
+          </tr>
+          <tr>
+            <td>quotation
+            </td>
+            <td>Quotation from the source of information.
+            </td>
+            <td>Text (multi-line)
+            </td>
+            <td>No
+            </td>
+            <td>Recommended
+            </td>
+            <td>NA
+            </td>
+            <td>NA
+            </td>
+          </tr>
+          <tr>
+            <td>page_numbers
+            </td>
+            <td>The page numbers on which the cited information appears eg. 1-3 or 1,3,5
             </td>
             <td>Text (single line)
             </td>
             <td>No
             </td>
-            <td>Required
+            <td>Recommended
             </td>
             <td>NA
             </td>
@@ -62,9 +82,10 @@
             </td>
           </tr>
           <tr>
-            <td>administrative_region
+            <td>url_of_record
             </td>
-            <td>If the Place is a City, the name of the state, province, or department in which a city is located.
+            <td>For records in online databases and digital catalogues ONLY:<br>
+              The URL (ideally permalink) of the record in the database or notice in the online catalogue. (Do not put a URL to a homepage or any page other than that of the record)
             </td>
             <td>Text (single line)
             </td>
@@ -78,44 +99,11 @@
             </td>
           </tr>
           <tr>
-            <td>country
+            <td>record_name
             </td>
-            <td>Country. The list is prepopulated, but can be extended, and includes 2 and 3 letter country codes.
+            <td>The name of the record in the database or catalogue.
             </td>
-            <td>Vocabulary
-            </td>
-            <td>No
-            </td>
-            <td>Recommended
-            </td>
-            <td>NA
-            </td>
-            <td><span class="badge-vocab">Country</span>
-            </td>
-          </tr>
-          <tr>
-            <td>place_type
-            </td>
-            <td>The type or category of place.
-            </td>
-            <td>Vocabulary
-            </td>
-            <td>No
-            </td>
-            <td>Required
-            </td>
-            <td>NA
-            </td>
-            <td><span class="badge-vocab">Place type</span>
-            </td>
-          </tr>
-          <tr>
-            <td>location_mappable
-            </td>
-            <td>Geospatial location(s) to which this record relates. Use for simple mapping where locations are identified by coordinates rather than names.<br>
-              Used to store standard geographical information. Can be a point, line or polygon. This detail can be thought of as an encapsulation of various sub details - e.g. latitude and longitude - which would otherwise need to be managed in separate details and therefore be more challenging to manage.
-            </td>
-            <td>Geospatial
+            <td>Text (single line)
             </td>
             <td>No
             </td>
@@ -127,31 +115,15 @@
             </td>
           </tr>
           <tr>
-            <td>location_certainty
+            <td>db_record_id
             </td>
-            <td>The confidence with which the location of the place is ascribed.
+            <td>The unique identifier of the record in the database / notice in the catalogue, typically an alphanumeric sequence, i.e. "4281" or "FRBNF11947470."
             </td>
-            <td>Vocabulary
+            <td>Text (single line)
             </td>
             <td>No
             </td>
-            <td>Required
-            </td>
-            <td>NA
-            </td>
-            <td><span class="badge-vocab">Certainty of location</span>
-            </td>
-          </tr>
-          <tr>
-            <td>NAME
-            </td>
-            <td>DEFINITION
-            </td>
-            <td>DTYPE
-            </td>
-            <td>REPEATABLE
-            </td>
-            <td>NECESSITY
+            <td>Recommended
             </td>
             <td>NA
             </td>
@@ -159,9 +131,25 @@
             </td>
           </tr>
           <tr>
-            <td>geonames_id
+            <td>ARK
             </td>
-            <td>The ID of the place in GeoNames. Info is then available at http://www.geonames.org/
+            <td>Archival Resource Key for the item or notice in the archival institution's catalogue / system.
+            </td>
+            <td>Text (single line)
+            </td>
+            <td>No
+            </td>
+            <td>Recommended
+            </td>
+            <td>NA
+            </td>
+            <td>NA
+            </td>
+          </tr>
+          <tr>
+            <td>reference_prefix
+            </td>
+            <td>Prefix or other key used in a dictionary or encyclopedia to refer to an entry, i.e. "AnsMetz."
             </td>
             <td>Text (single line)
             </td>
