@@ -16,7 +16,6 @@
       </li>
       <ul>
         <li><span class="badge-entity">Document</span> can relate to 0 or 1 <span class="badge-entity">Repository</span>.</li>
-        <li><span class="badge-entity">Document</span> can have 0, 1, or many <span class="badge-entity">Hypothesis</span>.</li>
         <li><span class="badge-entity">Document</span> can have 0, 1, or many <span class="badge-entity">Digitization</span>.</li>
         <li><span class="badge-entity">Document</span> can have 0, 1, or many <span class="badge-entity">Citation</span>.</li>
       </ul>
@@ -183,22 +182,19 @@
   <div class="card-body">
     <h4 class="card-title" font-size=40px>Attributes
     </h4>
-    <div class="card-header">
-      Label Components
-    </div>
     <div class="card-text">
       <table class="table table-bordered">
         <thead>
           <tr>
             <th>Name
             </th>
-            <th>Required
-            </th>
-            <th>Repeatable
+            <th>Definition
             </th>
             <th>Data type
             </th>
-            <th>Definition
+            <th>Repeatable
+            </th>
+            <th>Necessity
             </th>
             <th>Refers to entity
             </th>
@@ -208,234 +204,313 @@
         </thead>
         <tbody>
           <tr>
-              <td>current shelfmark
-              </td>
-              <td>no
-              </td>
-              <td>no
-              </td>
-              <td>Text (single line)
-              </td>
-              <td>If an extant (not hypothetical) document, the shelfmark by which the document can be requested or, in the case of unavailable archives, is known by.
-              </td>
-              <td>NA
-              </td>
-              <td>NA
-              </td>
-            </tr>
-            <tr>
-              <td>is conserved in
-              </td>
-              <td>no
-              </td>
-              <td>no
-              </td>
-              <td>Foreign key
-              </td>
-              <td>If an extant (not hypothetical) document, the institution that currently conserves the archival object.
-              </td>
-              <td><span class="badge-entity">Repository</span>
-              </td>
-              <td>NA
-              </td>
-            </tr>
-            <tr>
-              <td>collection
-              </td>
-              <td>no
-              </td>
-              <td>no
-              </td>
-              <td>Text (single line)
-              </td>
-              <td>Name of the collection in the institution (<span class="badge-entity">Repository</span>) that is responsible for the archival object.
-              </td>
-              <td>NA
-              </td>
-              <td>NA
-              </td>
-            </tr>
-            <tr>
-              <td>invented label
-              </td>
-              <td>no
-              </td>
-              <td>no
-              </td>
-              <td>Text (single line)
-              </td>
-              <td>If a hypothetical document, a useful label by which to identify and refer to the document.
-              </td>
-              <td>NA
-              </td>
-              <td>NA
-              </td>
-            </tr>
+            <td>current_shelfmark
+            </td>
+            <td>If this record is an extant (not hypothetical) document, the shelf mark by which it can be requested or, in the case of unavailable archives, by which it is known.
+            </td>
+            <td>Text (single line)
+            </td>
+            <td>No
+            </td>
+            <td>Recommended
+            </td>
+            <td>NA
+            </td>
+            <td>NA
+            </td>
+          </tr>
+          <tr>
+            <td>is_preserved_in
+            </td>
+            <td>If this record is an extant (not hypothetical) document, the institution that currently preserves the archival object.
+            </td>
+            <td>Foreign key
+            </td>
+            <td>No
+            </td>
+            <td>Recommended
+            </td>
+            <td><span class="badge-entity">Repository</span>
+            </td>
+            <td>NA
+            </td>
+          </tr>
+          <tr>
+            <td>collection
+            </td>
+            <td>Name of the collection in the institution that is responsible for the archival object.
+            </td>
+            <td>Text (single line)
+            </td>
+            <td>No
+            </td>
+            <td>Optional
+            </td>
+            <td>NA
+            </td>
+            <td>NA
+            </td>
+          </tr>
+          <tr>
+            <td>invented_label
+            </td>
+            <td>If this record is a hypothetical document, a useful label by which to recognize and refer to the document.
+            </td>
+            <td>Text (single line)
+            </td>
+            <td>No
+            </td>
+            <td>Optional
+            </td>
+            <td>NA
+            </td>
+            <td>NA
+            </td>
+          </tr>
+          <tr>
+            <td>is_hypothetical
+            </td>
+            <td>Whether the entity is attested (True) in a hypothesis or whether it is received as fact that it exists or existed (False).
+            </td>
+            <td>Vocabulary
+            </td>
+            <td>No
+            </td>
+            <td>Required
+            </td>
+            <td>NA
+            </td>
+            <td><span class="badge-vocab">yes/no/maybe</span>
+            </td>
+          </tr>
+          <tr>
+            <td>claim_freetext
+            </td>
+            <td>[Temporary]<br>
+              Brief note about the hypothesis that attests to this record's existence. This information is meant to be a temporary note that will eventually be entered into a Hypothesis entity, which should be linked back to this record.
+            </td>
+            <td>Text (multi-line)
+            </td>
+            <td>No
+            </td>
+            <td>Recommended
+            </td>
+            <td>NA
+            </td>
+            <td>NA
+            </td>
+          </tr>
+          <tr>
+            <td>collection_of_fragments
+            </td>
+            <td>Whether or not the document is a collection of fragments, compiled at a date significantly later than when the manuscript components were themselves created, i.e. a 19th-century collection of 12th- and 13th-century fragments.
+            </td>
+            <td>Vocabulary
+            </td>
+            <td>No
+            </td>
+            <td>Required
+            </td>
+            <td><span class="badge-vocab">yes/no</span>
+            </td>
+            <td>NA
+            </td>
+          </tr>
+          <tr>
+            <td>old_shelfmark
+            </td>
+            <td>Outmoded shelf marks by which the archival object used to be known and referenced.
+            </td>
+            <td>Text (single line)
+            </td>
+            <td>Yes
+            </td>
+            <td>Recommended
+            </td>
+            <td>NA
+            </td>
+            <td>NA
+            </td>
+          </tr>
+          <tr>
+            <td>digitization
+            </td>
+            <td>A digitization of the archival object, preferably in its entirety.
+            </td>
+            <td>Foreign key
+            </td>
+            <td>Yes
+            </td>
+            <td>Recommended
+            </td>
+            <td><span class="badge-entity">Digitization</span>
+            </td>
+            <td>NA
+            </td>
+          </tr>
+          <tr>
+            <td>digitzation_freetext
+            </td>
+            <td>Placeholder<br>
+              Reference to a digitization that hasn't yet been added to the database, as a means of temporarily storing information that will eventually be linked via an entity to this record.
+            </td>
+            <td>Text (single line)
+            </td>
+            <td>Yes
+            </td>
+            <td>Optional
+            </td>
+            <td>NA
+            </td>
+            <td>NA
+            </td>
+          </tr>
+          <tr>
+            <td>date_of_creation
+            </td>
+            <td>Time when the entity begins to exist.
+            </td>
+            <td>Date temporal
+            </td>
+            <td>No
+            </td>
+            <td>Recommended
+            </td>
+            <td>NA
+            </td>
+            <td>NA
+            </td>
+          </tr>
+          <tr>
+            <td>date_freetext
+            </td>
+            <td>Brief, human-readable description of the date given to this record.
+            </td>
+            <td>Text (single line)
+            </td>
+            <td>No
+            </td>
+            <td>Recommended
+            </td>
+            <td>NA
+            </td>
+            <td>NA
+            </td>
+          </tr>
+          <tr>
+            <td>date_of_creation_source
+            </td>
+            <td>Notes about the source of the creation date information, including a human-readable summary or transcription of the time range. Can include a brief bibliographic citation.
+            </td>
+            <td>Text (multi-line)
+            </td>
+            <td>No
+            </td>
+            <td>Recommended
+            </td>
+            <td>NA
+            </td>
+            <td>NA
+            </td>
+          </tr>
+          <tr>
+            <td>place_of_creation
+            </td>
+            <td>Place where the entity was conceived or made.
+            </td>
+            <td>Foreign key
+            </td>
+            <td>No
+            </td>
+            <td>Recommended
+            </td>
+            <td><span class="badge-entity">Place</span>
+            </td>
+            <td>NA
+            </td>
+          </tr>
+          <tr>
+            <td>place_of_creation_freetext
+            </td>
+            <td>Placeholder notes about the entity's place of creation, to eventually be converted into a relation to a Place entity.
+            </td>
+            <td>Text (single line)
+            </td>
+            <td>No
+            </td>
+            <td>Recommended
+            </td>
+            <td>NA
+            </td>
+            <td>NA
+            </td>
+          </tr>
+          <tr>
+            <td>place_of_creation_source
+            </td>
+            <td>Notes along with bibliographic citation about the source of the creation place information.
+            </td>
+            <td>Text (multi-line)
+            </td>
+            <td>No
+            </td>
+            <td>Recommended
+            </td>
+            <td>NA
+            </td>
+            <td>NA
+            </td>
+          </tr>
+          <tr>
+            <td>described_by_source
+            </td>
+            <td>Scholarly source or database record that discusses the entity.
+            </td>
+            <td>Foreign key
+            </td>
+            <td>Yes
+            </td>
+            <td>Recommended
+            </td>
+            <td><span class="badge-entity">Citation</span>
+            </td>
+            <td>NA
+            </td>
+          </tr>
+          <tr>
+            <td>semantic_reference_uri
+            </td>
+            <td>URI to a full description or ontological reference definition of the field.
+            </td>
+            <td>Text (single line)
+            </td>
+            <td>Yes
+            </td>
+            <td>Recommended
+            </td>
+            <td>NA
+            </td>
+            <td>NA
+            </td>
+          </tr>
+          <tr>
+            <td>reference_notes
+            </td>
+            <td>Brief notes about a reference and/or citation that should eventually be added to the database and linked to this record.
+            </td>
+            <td>Text (single line)
+            </td>
+            <td>Yes
+            </td>
+            <td>Optional
+            </td>
+            <td>NA
+            </td>
+            <td>NA
+            </td>
+          </tr>
         </tbody>
       </table>
-    </div>
-    <div class="card-header">
-      Hypothesis
-    </div>
-    <div class="card-text">
-      <table class="table table-bordered">
-          <thead>
-            <tr>
-              <th>Name
-              </th>
-              <th>Required
-              </th>
-              <th>Repeatable
-              </th>
-              <th>Data type
-              </th>
-              <th>Definition
-              </th>
-              <th>Refers to entity
-              </th>
-              <th>Defined by vocabulary
-              </th>
-            </tr>
-          </thead>
-          <tbody>
-              <tr>
-                  <td>is hypothetical
-                  </td>
-                  <td>yes
-                  </td>
-                  <td>no
-                  </td>
-                  <td>Boolean
-                  </td>
-                  <td>Whether the entity is attested (True) in a hypothesis or whether it is received as fact that it exists or existed (False). Default is "False."
-                  </td>
-                  <td>NA
-                  </td>
-                  <td>NA
-                  </td>
-                </tr>
-          </tbody>
-        </table>
-    </div>
-    <div class="card-header">
-      Description
-    </div>
-    <div class="card-text">
-      <table class="table table-bordered">
-          <thead>
-            <tr>
-              <th>Name
-              </th>
-              <th>Required
-              </th>
-              <th>Repeatable
-              </th>
-              <th>Data type
-              </th>
-              <th>Definition
-              </th>
-              <th>Refers to entity
-              </th>
-              <th>Defined by vocabulary
-              </th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>old shelfmark
-              </td>
-              <td>no
-              </td>
-              <td>yes
-              </td>
-              <td>Text (single line)
-              </td>
-              <td>Outmoded shelfmarks by which the archival object used to be known and referenced.
-              </td>
-              <td>NA
-              </td>
-              <td>NA
-              </td>
-            </tr>
-            <tr>
-              <td>collection of fragments
-              </td>
-              <td>yes
-              </td>
-              <td>no
-              </td>
-              <td>Boolean
-              </td>
-              <td>Whether or not the document is a collection of fragments, compiled at a date significantly later than when the manuscript components were themselves created, i.e. a nineteenth-century collection of twelfth- and thirteenth-century fragments.
-              </td>
-              <td>NA
-              </td>
-              <td>NA
-              </td>
-            </tr>
-            <tr>
-              <td>digitization
-              </td>
-              <td>no
-              </td>
-              <td>yes
-              </td>
-              <td>Foreign key
-              </td>
-              <td>A digitization of the archival object, preferably in its entirety.
-              </td>
-              <td><span class="badge-entity">Digitization</span>
-              </td>
-              <td>NA
-              </td>
-            </tr>
-          </tbody>
-        </table>
-    </div>
-    <div class="card-header">
-      References
-    </div>
-    <div class="card-text">
-      <table class="table table-bordered">
-          <thead>
-            <tr>
-              <th>Name
-              </th>
-              <th>Required
-              </th>
-              <th>Repeatable
-              </th>
-              <th>Data type
-              </th>
-              <th>Definition
-              </th>
-              <th>Refers to entity
-              </th>
-              <th>Defined by vocabulary
-              </th>
-            </tr>
-          </thead>
-          <tbody>
-              <tr>
-                  <td><a class="link" target="_blank" href="https://www.wikidata.org/wiki/Property:P1343">described by source</a>
-                  </td>
-                  <td>no
-                  </td>
-                  <td>yes
-                  </td>
-                  <td>Foreign key
-                  </td>
-                  <td>Scholarly source that discusses the entity.
-                  </td>
-                  <td>
-                    <span class="badge-entity">Citation
-                    </span>
-                  </td>
-                  <td>NA
-                  </td>
-                </tr>
-          </tbody>
-        </table>
     </div>
   </div>
 </div>

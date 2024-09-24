@@ -24,22 +24,19 @@
   <div class="card-body">
     <h4 class="card-title" font-size=40px>Attributes
     </h4>
-    <div class="card-header">
-      Label Components
-    </div>
     <div class="card-text">
       <table class="table table-bordered">
         <thead>
           <tr>
             <th>Name
             </th>
-            <th>Required
-            </th>
-            <th>Repeatable
+            <th>Definition
             </th>
             <th>Data type
             </th>
-            <th>Definition
+            <th>Repeatable
+            </th>
+            <th>Necessity
             </th>
             <th>Refers to entity
             </th>
@@ -49,189 +46,201 @@
         </thead>
         <tbody>
           <tr>
-              <td>is inscribed on
-              </td>
-              <td>yes
-              </td>
-              <td>no
-              </td>
-              <td>Foreign key
-              </td>
-              <td>The physical <span class="badge-entity">Document</span> on which the signs (letters) of a witness's part are inscribed.
-              </td>
-              <td><span class="badge-entity">Document</span>
-              </td>
-              <td>NA
-              </td>
-            </tr>
-            <tr>
-              <td><a class="link" target="_blank" href="https://www.wikidata.org/wiki/Property:P1545">order in series</a>
-              </td>
-              <td>yes
-              </td>
-              <td>no
-              </td>
-              <td>Integer
-              </td>
-              <td><a class="link" target="_blank" href="https://www.wikidata.org/wiki/Property:P1545">Sequential position of the <span class="badge-entity">Part</span> within the <span class="badge-entity">Witness</span>. Default is 1.</a>
-              </td>
-              <td>NA
-              </td>
-              <td>NA
-              </td>
-            </tr>
+            <td>is_inscribed_on
+            </td>
+            <td>The physical document on which the signs (letters) of a witness's parts are inscribed.
+            </td>
+            <td>Foreign key
+            </td>
+            <td>No
+            </td>
+            <td>Required
+            </td>
+            <td><span class="badge-entity">Document</span>
+            </td>
+            <td>NA
+            </td>
+          </tr>
+          <tr>
+            <td>represents_witness
+            </td>
+            <td>Witness represented on this part of the document. Can be all of or a part in a series of parts of the witness.
+            </td>
+            <td>Foreign key
+            </td>
+            <td>No
+            </td>
+            <td>Required
+            </td>
+            <td>NA
+            </td>
+            <td>NA
+            </td>
+          </tr>
+          <tr>
+            <td>order_in_series
+            </td>
+            <td>Sequential position of the part within the witness. Start counting at 1.
+            </td>
+            <td>Integer
+            </td>
+            <td>No
+            </td>
+            <td>Required
+            </td>
+            <td>NA
+            </td>
+            <td>NA
+            </td>
+          </tr>
+          <tr>
+            <td>number_of_verses
+            </td>
+            <td>To be compared with the "verse length" of the representative text, the number of verses or lines from the text represented on this part of the witness.
+            </td>
+            <td>Integer
+            </td>
+            <td>No
+            </td>
+            <td>Recommended
+            </td>
+            <td>NA
+            </td>
+            <td>NA
+            </td>
+          </tr>
+          <tr>
+            <td>part_of_text
+            </td>
+            <td>A simple description of the portion of the text, i.e. "first third," represented on this part of the witness.
+            </td>
+            <td>Text (single line)
+            </td>
+            <td>No
+            </td>
+            <td>Recommended
+            </td>
+            <td>NA
+            </td>
+            <td>NA
+            </td>
+          </tr>
+          <tr>
+            <td>volume_number
+            </td>
+            <td>If the witness is composed of multiple volumes, the integer, roman numeral, or other indicator used by archival or library catalogues to identify the part as a volume of the witness.
+            </td>
+            <td>Text (single line)
+            </td>
+            <td>No
+            </td>
+            <td>Recommended
+            </td>
+            <td>NA
+            </td>
+            <td>NA
+            </td>
+          </tr>
+          <tr>
+            <td>number_of_lines
+            </td>
+            <td>The length of the text as calculated by the number of lines.
+            </td>
+            <td>Integer
+            </td>
+            <td>No
+            </td>
+            <td>Recommended
+            </td>
+            <td>NA
+            </td>
+            <td>NA
+            </td>
+          </tr>
+          <tr>
+            <td>lines_are_incomplete
+            </td>
+            <td>Whether the text lines have been interrupted, i.e. cut (Yes, incomplete).
+            </td>
+            <td>Vocabulary
+            </td>
+            <td>No
+            </td>
+            <td>Required
+            </td>
+            <td>NA
+            </td>
+            <td>NA
+            </td>
+          </tr>
+          <tr>
+            <td>page_ranges
+            </td>
+            <td>A formatted string that represents the numbering on the beginning and end of an uninterrupted series of pages.<br>
+              When a range of pages, separate the two numbers with two colons, i.e. "1r::4v".<br>
+              When a single page, do not include separator, i.e. "1r".
+            </td>
+            <td>Text (single line)
+            </td>
+            <td>Yes
+            </td>
+            <td>Required
+            </td>
+            <td>NA
+            </td>
+            <td>NA
+            </td>
+          </tr>
+          <tr>
+            <td>described_by_source
+            </td>
+            <td>Scholarly source or database record that discusses the entity.
+            </td>
+            <td>Foreign key
+            </td>
+            <td>Yes
+            </td>
+            <td>Recommended
+            </td>
+            <td><span class="badge-entity">Citation</span>
+            </td>
+            <td>NA
+            </td>
+          </tr>
+          <tr>
+            <td>semantic_reference_uri
+            </td>
+            <td>URI to a full description or ontological reference definition of the field.
+            </td>
+            <td>Text (single line)
+            </td>
+            <td>Yes
+            </td>
+            <td>Recommended
+            </td>
+            <td>NA
+            </td>
+            <td>NA
+            </td>
+          </tr>
+          <tr>
+            <td>reference_notes
+            </td>
+            <td>Brief notes about a reference and/or citation that should eventually be added to the database and linked to this record.
+            </td>
+            <td>Text (single line)
+            </td>
+            <td>Yes
+            </td>
+            <td>Optional
+            </td>
+            <td>NA
+            </td>
+            <td>NA
+            </td>
+          </tr>
         </tbody>
       </table>
-    </div>
-    <div class="card-header">
-      Content
-    </div>
-    <div class="card-text">
-      <table class="table table-bordered">
-          <thead>
-            <tr>
-              <th>Name
-              </th>
-              <th>Required
-              </th>
-              <th>Repeatable
-              </th>
-              <th>Data type
-              </th>
-              <th>Definition
-              </th>
-              <th>Refers to entity
-              </th>
-              <th>Defined by vocabulary
-              </th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>number of verses
-              </td>
-              <td>no
-              </td>
-              <td>no
-              </td>
-              <td>Integer
-              </td>
-              <td>To be compared with the "verse length" of the representative <span class="badge-entity">Text</span>, the number of verses or lines from the <span class="badge-entity">Text</span> represented on this <span class="badge-entity">Part</span> of the <span class="badge-entity">Witness</span>.
-              </td>
-              <td>NA
-              </td>
-              <td>NA
-              </td>
-            </tr>
-            <tr>
-              <td>part of text
-              </td>
-              <td>no
-              </td>
-              <td>no
-              </td>
-              <td>Text (single line)
-              </td>
-              <td>A simple description of the portion of the <span class="badge-entity">Text</span>, i.e. "first third," represented on this <span class="badge-entity">Part</span> of the <span class="badge-entity">Witness</span>. 
-              </td>
-              <td>NA
-              </td>
-              <td>NA
-              </td>
-            </tr>
-            <tr>
-              <td>volume number
-              </td>
-              <td>no
-              </td>
-              <td>no
-              </td>
-              <td>Text (single line)
-              </td>
-              <td>If the <span class="badge-entity">Witness</span> is composed of multiple volumes, the integer, roman numeral, or other indicator used by archival or library catalogues to identify the <span class="badge-entity">Part</span> as a volume of the <span class="badge-entity">Witness</span>.
-              </td>
-              <td>NA
-              </td>
-              <td>NA
-              </td>
-            </tr>
-          </tbody>
-        </table>
-    </div>
-    <div class="card-header">
-      Extent
-    </div>
-    <div class="card-text">
-      <table class="table table-bordered">
-          <thead>
-            <tr>
-              <th>Name
-              </th>
-              <th>Required
-              </th>
-              <th>Repeatable
-              </th>
-              <th>Data type
-              </th>
-              <th>Definition
-              </th>
-              <th>Refers to entity
-              </th>
-              <th>Defined by vocabulary
-              </th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>number of lines
-              </td>
-              <td>no
-              </td>
-              <td>no
-              </td>
-              <td>Integer
-              </td>
-              <td>The length of the text as calculated by the number of lines.
-              </td>
-              <td>NA
-              </td>
-              <td>NA
-              </td>
-            </tr>
-            <tr>
-              <td>lines are incomplete
-              </td>
-              <td>yes
-              </td>
-              <td>no
-              </td>
-              <td>Boolean
-              </td>
-              <td>Whether the text lines have been interrupted, i.e. cut (True), or not (False). Default is False.
-              </td>
-              <td>NA
-              </td>
-              <td>NA
-              </td>
-            </tr>
-            <tr>
-              <td><a class="link" target="_blank" href="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-locus.html">page ranges</a>
-              </td>
-              <td>yes
-              </td>
-              <td>yes
-              </td>
-              <td>Text (single line)
-              </td>
-              <td>A formatted string that represents the numbering (similar to <a class="link" target="_blank" href="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-locus.html">locus</a>) on the first and last pages of the <span class="badge-entity">Part</span>. When a page range, separate the two numbers with a vertical line, i.e. "1r|4v". When a single page, do not include separator, i.e. "1r".
-              </td>
-              <td>NA
-              </td>
-              <td>NA
-              </td>
-            </tr>
-          </tbody>
-        </table>
     </div>
   </div>
 </div>
