@@ -28,22 +28,19 @@
   <div class="card-body">
     <h4 class="card-title" font-size=40px>Attributes
     </h4>
-    <div class="card-header">
-      Label Components
-    </div>
     <div class="card-text">
       <table class="table table-bordered">
         <thead>
           <tr>
             <th>Name
             </th>
-            <th>Required
-            </th>
-            <th>Repeatable
+            <th>Definition
             </th>
             <th>Data type
             </th>
-            <th>Definition
+            <th>Repeatable
+            </th>
+            <th>Necessity
             </th>
             <th>Refers to entity
             </th>
@@ -53,58 +50,31 @@
         </thead>
         <tbody>
           <tr>
-            <td>preferred name
+            <td>preferred_name
             </td>
-            <td>yes
-            </td>
-            <td>no
+            <td>Received or primary name by which the entity is known.
             </td>
             <td>Text (single line)
             </td>
-            <td>Received name of the entity.
+            <td>No
+            </td>
+            <td>Required
             </td>
             <td>NA
             </td>
             <td>NA
             </td>
           </tr>
-        </tbody>
-      </table>
-    </div>
-    <div class="card-header">
-      Description
-    </div>
-    <div class="card-text">
-      <table class="table table-bordered">
-        <thead>
-          <tr>
-            <th>Name
-            </th>
-            <th>Required
-            </th>
-            <th>Repeatable
-            </th>
-            <th>Data type
-            </th>
-            <th>Definition
-            </th>
-            <th>Refers to entity
-            </th>
-            <th>Defined by vocabulary
-            </th>
-          </tr>
-        </thead>
-        <tbody>
           <tr>
             <td>description
             </td>
-            <td>yes
+            <td>An extended description, use this for free-format description up to 64K latin or 32K UTF characters.
             </td>
-            <td>no
+            <td>Text (multi-line)
             </td>
-            <td>Text (multiple lines)
+            <td>No
             </td>
-            <td>Explanation of what defines the entity.
+            <td>Required
             </td>
             <td>NA
             </td>
@@ -114,13 +84,13 @@
           <tr>
             <td>language
             </td>
-            <td>yes
-            </td>
-            <td>no
+            <td>Spoken language through which the entity is primarily expressed.
             </td>
             <td>Vocabulary
             </td>
-            <td>Human language through which the entity is primarily expressed.
+            <td>No
+            </td>
+            <td>Required
             </td>
             <td>NA
             </td>
@@ -130,60 +100,79 @@
           <tr>
             <td>region
             </td>
-            <td>no
-            </td>
-            <td>no
+            <td>Region in which the entity is primarily located.
             </td>
             <td>Foreign key
             </td>
-            <td>Region in which the entity is primarily located.
+            <td>No
+            </td>
+            <td>Recommended
             </td>
             <td><span class="badge-entity">Place</span>
             </td>
             <td>NA
             </td>
           </tr>
-        </tbody>
-      </table>
-    </div>
-    <div class="card-header">
-      References
-    </div>
-    <div class="card-text">
-      <table class="table table-bordered">
-        <thead>
           <tr>
-            <th>Name
-            </th>
-            <th>Required
-            </th>
-            <th>Repeatable
-            </th>
-            <th>Data type
-            </th>
-            <th>Definition
-            </th>
-            <th>Refers to entity
-            </th>
-            <th>Defined by vocabulary
-            </th>
+            <td>region_note
+            </td>
+            <td>Brief note about the region in which the entity is primarily located.
+            </td>
+            <td>Text (multi-line)
+            </td>
+            <td>No
+            </td>
+            <td>Optional
+            </td>
+            <td>NA
+            </td>
+            <td>NA
+            </td>
           </tr>
-        </thead>
-        <tbody>
           <tr>
-            <td><a class="link" target="_blank" href="https://www.wikidata.org/wiki/Property:P1343">described by source</a>
+            <td>described_by_source
             </td>
-            <td>no
-            </td>
-            <td>yes
+            <td>Scholarly source or database record that discusses the entity.
             </td>
             <td>Foreign key
             </td>
-            <td>Scholarly source that discusses the entity.
+            <td>Yes
             </td>
-            <td>
-              <span class="badge-entity">Citation
-              </span>
+            <td>Recommended
+            </td>
+            <td><span class="badge-entity">Citation</span>
+            </td>
+            <td>NA
+            </td>
+          </tr>
+          <tr>
+            <td>semantic_reference_uri
+            </td>
+            <td>URI to a full description or ontological reference definition of the field.
+            </td>
+            <td>Text (single line)
+            </td>
+            <td>Yes
+            </td>
+            <td>Recommended
+            </td>
+            <td>NA
+            </td>
+            <td>NA
+            </td>
+          </tr>
+          <tr>
+            <td>reference_notes
+            </td>
+            <td>Brief notes about a reference and/or citation that should eventually be added to the database and linked to this record.
+            </td>
+            <td>Text (single line)
+            </td>
+            <td>Multivalue
+            </td>
+            <td>Optional
+            </td>
+            <td>NA
             </td>
             <td>NA
             </td>
