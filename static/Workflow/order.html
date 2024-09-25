@@ -1,0 +1,61 @@
+<link rel="stylesheet" href="../../css/heurist.css">
+
+<div class="card text-center" data-bs-theme="light">
+
+    <div class="card-body">
+        <p>A literary work's tradition can be described through 6 record types.</p>
+    
+        <p>When entering the tradition into the database, we recommend you start from the abstract literary content, the cycle or work, and proceed toward the concrete, the document and its parts.</p>
+    </div>
+
+    <div class="card-body">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Order</th>
+                    <th>Record type</th>
+                    <th>Required dependencies</th>
+                    <th>Recommended dependencies</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td><span class="badge-entity">Cycle</span></td>
+                    <td></td>
+                    <td><span class="badge-entity">Cycle</span></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td><span class="badge-entity">Work</span></td>
+                    <td></td>
+                    <td><span class="badge-entity">Cycle</span></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td><span class="badge-entity">Text</span></td>
+                    <td><span class="badge-entity">Work</span></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td><span class="badge-entity">Document</span></td>
+                    <td><span class="badge-entity">Repository</span></td>
+                    <td><span class="badge-entity">Digitization</span></td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td><span class="badge-entity">Witness</span></td>
+                    <td><span class="badge-entity">Text</span></td>
+                    <td><span class="badge-entity">Document</span></td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td><span class="badge-entity">Part</span></td>
+                    <td><span class="badge-entity">Witness</span> <span class="badge-entity">Document</span></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

@@ -1,0 +1,126 @@
+<link rel="stylesheet" href="../../../css/heurist.css">
+
+<div class="card center" data-bs-theme="light">
+    <div class="row">
+        <div class="col-6">
+            <div class="card-body">
+                <p>Several record types contain temporal information, especially about when an object began to exist. For example, the <span class="badge-entity">Text</span> record type requires a <span class="badge-field">date_of_creation</span>. Dates in Heurist can be precise or imprecise.</p>
+
+                <p>The type of metadata you can attach to an imprecise date depends on how you are entering data.</p>
+
+                <b>CSV import</b>
+
+                <p>When entering data via CSV import, you can only provide a precise date or a simple date range. The granularity of the precise date or the beginning and ending of the date range can vary. You can give a year (YYYY), a month (YYYY-MM), or a day (YYYY-MM-DD).</p>
+                
+                <p>To provide a range, separate the two dates by a period. In the example shown below, we see a column containing a precise date, the year 1180, and a range, between 1230 and 1235.</p>
+
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>date_of_creation</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1180</td>
+                        </tr>
+                        <tr>
+                            <td>1230.1235</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <p>These are the only types of information that can be provided via CSV import.</p>
+
+                <b>Manual import</b>
+
+                <p>Heurist's user interface, however, allows for more precision about the imprecision of a date or a date range. By clicking the range icon next to the data field, you open a pop-up window that has four types of date formats: Simple Date, Simple Range, Fuzzy Range, and Radiometric. In our workflow, you are free to use any of the first three, each of which is described in detail below.</p>
+
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="card-body">
+                <img
+                src="https://github.com/LostMa-ERC/heurist-cms-website/blob/main/img/date1.png?raw=true"
+                alt="Screenshot of the window to create a new Text record type, showing the date_of_creation field."
+                class="center"
+                width="70%"
+                >
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="card center" data-bs-theme="light">
+    <div class="row">
+        <div class="col-6">
+            <div class="card-body">
+                <h3>Simple Date</h3>
+                <p>The Simple Date tab allows you to attach metadata to a year, month, or day.</p>
+                <p>After entering the precise date, select one of the radio buttons to the right: "Exact," "Circa/approximate," "Before," or "After." Heurist will automatically select, as a default, the button "Exact."</p>
+                <p>In our workflow, we do not expect you to describe the type of certainty about the simple date, as indicated by the four levels of "Type of Determination": unknown, attested, conjecture, and measurement. You can enter this information if you want, but it will not be present on my records and no scaled treatment of this information is planned.</p>
+                <p>Do not adjust the type of calendar used on the Simple Date. Leave the default Gregorian selection.</p>
+                <p>In summary:</p>
+                <ul>
+                    <li>Necessary:</li>
+                    <ul>
+                        <li>Date (Year or ISO date)</li>
+                        <li>Metadata about date (Exact, Circa/approximate, Before, After)</li>
+                    </ul>
+                </ul>
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="card-body">
+                <img
+                src="https://github.com/LostMa-ERC/heurist-cms-website/blob/main/img/date2.png?raw=true"
+                alt="Screenshot of a date field in Heurist, showing the simple date tab."
+                class="center"
+                width="70%"
+                >
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="card center" data-bs-theme="light">
+    <div class="row">
+        <div class="col-6">
+            <div class="card-body">
+                <h3>Simple Range</h3>
+                <p></p>
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="card-body">
+                <img
+                src="https://github.com/LostMa-ERC/heurist-cms-website/blob/main/img/date3.png?raw=true"
+                alt="Screenshot of a date field in Heurist, showing the simple range tab."
+                class="center"
+                width="70%"
+                >
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="card center" data-bs-theme="light">
+    <div class="row">
+        <div class="col-6">
+            <div class="card-body">
+                <h3>Fuzzy Range</h3>
+                <p></p>
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="card-body">
+                <img
+                src="https://github.com/LostMa-ERC/heurist-cms-website/blob/main/img/date4.png?raw=true"
+                alt="Screenshot of a date field in Heurist, showing the fuzzy range tab."
+                class="center"
+                width="70%"
+                >
+            </div>
+        </div>
+    </div>
+</div>

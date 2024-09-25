@@ -1,0 +1,112 @@
+<link rel="stylesheet" href="../../../css/heurist.css">
+
+<div class="card center" data-bs-theme="light">
+
+    <div class="card-body">
+
+    <h2>Data fields that link records</h2>
+
+    <p>Some data fields refer to other records. For example, the field <span class="badge-field">described_by_source</span> connects a record with a <span class="badge-entity">Citation</span> that contains information about the record. We have imported all the texts described in volume 1 of Moisan's <em>Répertoire des noms propres de personnes et de lieux</em> as <span class="badge-entity">Citation</span> records. As a result, using the <span class="badge-field">described_by_source</span> field, we can relate the <span class="badge-entity">Text</span> <em>Agolant</em> with a <span class="badge-entity">Citation</span> from Moisan. The latter is displayed below.</p>
+
+    <p><b>Ag - AGOLANT, Moisan (1986) v.1: 33</b> <span class="badge-entity">Citation</span></p>
+
+    <table class="table table-bordered">
+        <tr>
+            <th>information_source</th>
+            <td>Moisan (1986) v. 1</td>
+        </tr>
+        <tr>
+            <th>quotation</th>
+            <td>[texte plus ou moins influencé par la Chronique de Turpin (PT, Textes Annexes)] Fragments de manuscrits français. I) Fragment d'une chanson de geste relative à la guerre d’Espagne, publié par P. MEYER, dans Rom. XXXV, 1906, p. 22-31— fin 12è - début 13è s. (remanṯ français ?) ; ms. fin 13è s. (français) = 160 v. [Geste du roi Charles.] G → vers.</td>
+        </tr>
+        <tr>
+            <th>page_numbers</th>
+            <td>33</td>
+        </tr>
+        <tr>
+            <th>reference_prefix</th>
+            <td>Ag - AGOLANT</td>
+        </tr>
+    </table>
+
+    <p>As such, the <span class="badge-entity">Text</span> <em>Agolant</em> will have a citation from Moisan, including the content of the dictionary's entry. Furthermore, we can return to the source in Moisan, using attributes from the <span class="badge-entity">Citation</span> (i.e. <span class="badge-field">page_numbers</span>), and further contextualize the record on <em>Agolant</em>.</p>
+
+    </div>
+
+</div>
+
+<div class="row">
+    <div class="col-6">
+        <div class="card center" data-bs-theme="light">
+            <div class="card-body">
+                <h3>Linking records manually</h3>
+                <div>
+                    <p>Click on the record's data field that links to another record in the database. In example, the <span class="badge-field">described_by_source</span> data field, which is an attribute of many record types, links to a <span class="badge-entity">Citation</span> entity. Clicking on the data field will reveal a drop-down list of available records that conform to the data field's expected record type. This quick list is not comprehensive but can be useful for record types that have fewer than 100 records, i.e. <span class="badge-entity">Genre</span> or <span class="badge-entity">Scripta</span>.</p>
+                    
+                    <p>Finally, from this initial list, you can reduce the records shown by typing part of their label. Again, this quick window is useful for record types that are not very numerous. However, for <span class="badge-entity">Citation</span> records, <span class="badge-entity">Place</span> records, and most of the main record types in the database, the number is too great and the label is too long for this simple filter. To fully search for existing records (or to create a new one for the data field you're completing), click on "Search/Add."</p>
+            
+                    <img 
+                    src="https://github.com/LostMa-ERC/heurist-cms-website/blob/main/img/add_citation1.png?raw=true"
+                    alt="Screenshot of a Heurist record in edit/create mode with a record pointer data field. The data field has been clicked so a drop-down menu of existing records to possibly link via that field is shown."
+                    class="center"
+                    width="90%"
+                    >
+                </div>
+                <div>
+                    <p>Clicking "Search/Add" reveals a pop-up window that facilitates both searching and creating records. First, you should search the database for records that already exists. During data entry, searching in Heurist relies on a record's label. The search engine does not explore information in data fields that are not part of the record's label. If you know or strongly suspect that a record exists but your search via its label is unsuccessful, you can look up its label in Heurist's "Explore" tab. Once you see the correct record in the pop-up window's list, click on it. This will enter that record in the data field.</p>
+            
+                    <img
+                    src="https://github.com/LostMa-ERC/heurist-cms-website/blob/main/img/add_citation2.png?raw=true"
+                    alt="Screenshot of a Heurist record in edit/create mode with a record pointer data field. The data field has been clicked and the link Search/Add has been clicked, so a larger drop-down menu of existing records that can link to the field is shown and a search bar is available. There is also a button that can be clicked to add a new entity that can link to the entity."
+                    width="90%"
+                    class="center"
+                    >
+                    <p>If the record you want to enter into the data field you're completing is not already in the database, you can create it by clicking on the green button "+ Add ..." However, please only add a new record after having confirmed that the database does not already have a record that represents the same information you want to add.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-6">
+        <div class="card center" data-bs-theme="light">
+            <div class="card-body">
+                <h3>Linking records via CSV import</h3>
+                <div>
+                    <p>When you're importing many records at once via a CSV file, data fields that link to another record require the Heurist ID. Every record in the Heurist database has a unique ID, which is an integer.</p>
+
+                    <p>The internal Heurist ID is viewable whenever you click on a record in the database. It is shown near the top of the record's profile, directly beneath the label and next to the record type's icon and name. In the example below, we are viewing the profile of a record of a document, specifically a manuscript in the Bibliothèque nationale de France's Arsenal library. The record's Heurist ID is 45700. The pencil next to the ID number is to edit the entire record, not the ID. A record's Heurist ID cannot be changed.</p>
+
+                    <img
+                    src="https://github.com/LostMa-ERC/heurist-cms-website/blob/main/img/docid.png?raw=true"
+                    alt="Screenshot of a document record with the label 'Bibliothèque nationale de France (Paris, France) Arsenal, Ms-3348' with the ID 45700."
+                    width="90%"
+                    class="center"
+                    >
+
+                    <p>Once you have the internal Heurist ID of the record you want to input in the data field, simply enter it in the relevant column. If, however, a record you're importing has multiple linked records in a data field, separate the multiple Heurist IDs with a vertical pipe, |.</p>
+                    
+                    <p>Take for example the <em>Histoire ancienne jusqu'à César</em>, which compiles multiple pre-existing stories, including the <em>Roman de Thebes</em> (i.e. Heurist ID 1001) and the <em>Roman d'Alexandre</em> (i.e. Heurist ID 1002). Below, we see how to prepare a CSV row for the <em>Histoire ancienne jusqu'à César</em> in a way that lets you link it to multiple other <span class="badge-entity">Work</span> records in the database.</p>
+
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th>preferred_name</th>
+                                <th>matter</th>
+                                <th>is_modeled_on H-ID</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Histoire ancienne jusqu'à César</td>
+                                <td>Rome</td>
+                                <td>1001|1002</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <p>It is imperative that the name of the column for the linked records ends with "H-ID." Only with that 4-character sequence will Heurist allow you to use the values of that column to enter information in a data field reserved for linked records, such as the field <span class="badge-field">is_modeled_on</span> on the <span class="badge-entity">Work</span> record type.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
