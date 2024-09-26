@@ -88,7 +88,16 @@
         <div class="col-6">
             <div class="card-body">
                 <h3>Simple Range</h3>
-                <p></p>
+                <p>The Simple Range tab allows you to attach metadata to a set of two dates. The two dates indicate a simple span of time.</p>
+                <p>In our workflow, we do not expect you to add any further information about the certainty of the range. To go into further detail, we recommend you use the Fuzzy Range tab.</p>
+                <p>In summary:</p>
+                <ul>
+                    <li>Necessary:</li>
+                    <ul>
+                        <li>Earliest Date (Year or ISO date)</li>
+                        <li>Latest Date (Year or ISO date)</li>
+                    </ul>
+                </ul>
             </div>
         </div>
         <div class="col-6">
@@ -109,7 +118,25 @@
         <div class="col-6">
             <div class="card-body">
                 <h3>Fuzzy Range</h3>
-                <p></p>
+                <p>The Fuzzy Range tab allows you to detail two overlapping spans of time, the possible and the probable. The fuzzy range is based on four dates:</p>
+                <ul>
+                    <li><b>Terminus post quem</b>: The earliest point in time when it would be possible for the event to have taken place.</li>
+                    <li><b>Probable begin</b>: The earliest point in time when it is likely the event took place. To set it to the same as the terminus post quem, click the "set" button.</li>
+                    <li><b>Probable end</b>: The latest point in time when it is likely that the event took place. To set it to the same as the terminus ante quem, click the "set" button.</li>
+                    <li><b>Terminus ante quem</b>: The latest point in time when it would be possible for the event to have taken place.</li>
+                </ul>
+                <p>From the drop-down menus "Start Profile" and "End Profile," you can detail the distribution of probability between the possible extreme time points and the likely internal time points. The options are the following: flat, central, slow start, slow finish. When you do not know the distribution, leave the default value: flat.</p>
+                <ul>
+                    <li>Necessary:</li>
+                    <ul>
+                        <li>Terminus post quem (Year or ISO date)</li>
+                        <li>Probable begin (Year or ISO date)</li>
+                        <li>Probable end (Year or ISO date)</li>
+                        <li>Terminus ante quem (Year or ISO date)</li>
+                        <li>Start profile (flat, central, slow start, slow finish)</li>
+                        <li>End profile (flat, central, slow start, slow finish)</li>
+                    </ul>
+                </ul>
             </div>
         </div>
         <div class="col-6">
