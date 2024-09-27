@@ -34,64 +34,11 @@
     </ul>
   </div>
 </div>
-<div class="card text-center" data-bs-theme="offset">
-  <div class="card-body" id="hypoCard">
-    <h5 class="card-title">Example of Hypothetical Version
-    </h5>
-    <div class="card-text">
-      <p>
-        According to a fourteenth-century inventory of a library at the Abbey of Peterborough, there was a Witness to the French Text <em>chanson d'Otinel</em> in the monks' collection; however, the inventoried manuscript no longer exists.
-      </p>
-      <p>
-        When creating the <span class="badge-entity">Witness</span> entity, set "is hypothetical" to "True" and create a <span class="badge-entity">Hypothesis</span> entity, shown below, that links to the lost <em>chanson d'Otinel</em> and details the claim attesting to its existence.
-        The hypothetical <span class="badge-entity">Witness</span> can be related to more than one <span class="badge-entity">Hypothesis</span>, which has its own degree of certainty and draws on its own sources of information to make the argument.
-        </p>
-    </div>
-    <div class="card-header">
-      <h5><span class="badge-entity">Hypothesis</span> entity</h5>
-    </div>
-    <table class="table table-bordered">
-      <thead>
-        <tr>
-          <th>Entity attribute
-          </th>
-          <th>Example description
-          </th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>attested object
-          </td>
-          <td>This example; the lost, hypothetical Witness. (<span class="badge-entity">Witness</span> foreign key)
-          </td>
-        </tr>
-        <tr>
-          <td>claim
-          </td>
-          <td>The Witness attested to have existed according to the Abbey's inventory is a manifestation of the Text <em>chanson d'Otinel</em>, though the Document and all Parts are now lost.
-          </td>
-        </tr>
-        <tr>
-          <td>certainty
-          </td>
-          <td>3
-          </td>
-        </tr>
-        <tr>
-          <td>described by source
-          </td>
-          <td>Jean-Baptiste Camp's dissertation (<span class="badge-entity">Citation</span> foreign key)
-          </td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-</div>
-<div class="card text-center" data-bs-theme="light" id="attCard">
+
+<div class="card text-center" data-bs-theme="main">
   <div class="card-body">
-    <h4 class="card-title" font-size=40px>Attributes
-    </h4>
+    <h5 class="card-title" font-size=40px>Label Components
+    </h5>
     <div class="card-text">
       <table class="table table-bordered">
         <thead>
@@ -162,6 +109,37 @@
             <td>NA
             </td>
           </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<div class="card text-center" data-bs-theme="light">
+  <div class="card-body">
+    <h4 class="card-title" font-size=40px>Hypothesis
+    </h4>
+    <div class="card-text">
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th>Name
+            </th>
+            <th>Definition
+            </th>
+            <th>Data type
+            </th>
+            <th>Repeatable
+            </th>
+            <th>Necessity
+            </th>
+            <th>Refers to entity
+            </th>
+            <th>Defined by vocabulary
+            </th>
+          </tr>
+        </thead>
+        <tbody>
           <tr>
             <td>is_hypothetical
             </td>
@@ -245,6 +223,37 @@
             <td>NA
             </td>
           </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<div class="card text-center" data-bs-theme="main">
+  <div class="card-body">
+    <h4 class="card-title" font-size=40px>Description
+    </h4>
+    <div class="card-text">
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th>Name
+            </th>
+            <th>Definition
+            </th>
+            <th>Data type
+            </th>
+            <th>Repeatable
+            </th>
+            <th>Necessity
+            </th>
+            <th>Refers to entity
+            </th>
+            <th>Defined by vocabulary
+            </th>
+          </tr>
+        </thead>
+        <tbody>
           <tr>
             <td>status_witness
             </td>
@@ -293,8 +302,39 @@
             <td><span class="badge-vocab">yes/no/maybe</span>
             </td>
           </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<div class="card text-center" data-bs-theme="light">
+  <div class="card-body">
+    <h4 class="card-title" font-size=40px>Production
+    </h4>
+    <div class="card-text">
+      <table class="table table-bordered">
+        <thead>
           <tr>
-            <td>scripta
+            <th>Name
+            </th>
+            <th>Definition
+            </th>
+            <th>Data type
+            </th>
+            <th>Repeatable
+            </th>
+            <th>Necessity
+            </th>
+            <th>Refers to entity
+            </th>
+            <th>Defined by vocabulary
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>regional_writing_style
             </td>
             <td>A regional writing style (aka scripta), similar to the written version of a spoken dialect.
             </td>
@@ -437,6 +477,37 @@
             <td>NA
             </td>
           </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<div class="card text-center" data-bs-theme="main">
+  <div class="card-body">
+    <h4 class="card-title" font-size=40px>References
+    </h4>
+    <div class="card-text">
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th>Name
+            </th>
+            <th>Definition
+            </th>
+            <th>Data type
+            </th>
+            <th>Repeatable
+            </th>
+            <th>Necessity
+            </th>
+            <th>Refers to entity
+            </th>
+            <th>Defined by vocabulary
+            </th>
+          </tr>
+        </thead>
+        <tbody>
           <tr>
             <td>described_by_source
             </td>
@@ -488,5 +559,60 @@
         </tbody>
       </table>
     </div>
+  </div>
+</div>
+
+<div class="card text-center" data-bs-theme="offset">
+  <div class="card-body" id="hypoCard">
+    <h5 class="card-title">Example of Hypothetical Version
+    </h5>
+    <div class="card-text">
+      <p>
+        According to a fourteenth-century inventory of a library at the Abbey of Peterborough, there was a Witness to the French Text <em>chanson d'Otinel</em> in the monks' collection; however, the inventoried manuscript no longer exists.
+      </p>
+      <p>
+        When creating the <span class="badge-entity">Witness</span> entity, set "is hypothetical" to "True" and create a <span class="badge-entity">Hypothesis</span> entity, shown below, that links to the lost <em>chanson d'Otinel</em> and details the claim attesting to its existence.
+        The hypothetical <span class="badge-entity">Witness</span> can be related to more than one <span class="badge-entity">Hypothesis</span>, which has its own degree of certainty and draws on its own sources of information to make the argument.
+        </p>
+    </div>
+    <div class="card-header">
+      <h5><span class="badge-entity">Hypothesis</span> entity</h5>
+    </div>
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>Entity attribute
+          </th>
+          <th>Example description
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>attested object
+          </td>
+          <td>This example; the lost, hypothetical Witness. (<span class="badge-entity">Witness</span> foreign key)
+          </td>
+        </tr>
+        <tr>
+          <td>claim
+          </td>
+          <td>The Witness attested to have existed according to the Abbey's inventory is a manifestation of the Text <em>chanson d'Otinel</em>, though the Document and all Parts are now lost.
+          </td>
+        </tr>
+        <tr>
+          <td>certainty
+          </td>
+          <td>3
+          </td>
+        </tr>
+        <tr>
+          <td>described by source
+          </td>
+          <td>Jean-Baptiste Camp's dissertation (<span class="badge-entity">Citation</span> foreign key)
+          </td>
+        </tr>
+      </tbody>
+    </table>
   </div>
 </div>
