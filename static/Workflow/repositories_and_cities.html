@@ -1,0 +1,88 @@
+<link rel="stylesheet" href="../../css/heurist.css">
+
+<div class="card center" data-bs-theme="light">
+    <div class="card-body">
+        <h2>Repositories and cities</h2>
+        <p>If you want to add a new repository, you might also need to add a new city (Place).</p>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-6">
+        <div class="card center" data-bs-theme="light">
+            <div class="card-body">
+                <h3><span class="badge-entity">Place</span></h3>
+                <ul>
+                    <li><span class="badge-field">place_name</span>: The name by which the location is most commonly known.</li>
+                    <li><span class="badge-field">administrative_region</span>: Equivalent to GeoNames' administrative region 1, the name of the state, province, or départment in which a city, town, or municipality is located.</li>
+                    <li><span class="badge-field">country</span>: From the <span class="badge-vocab">Country</span> controlled vocabulary, the country in which the place is located.</li>
+                    <li><span class="badge-field">place_type</span>: The type or category that describes the place.</li>
+                    <ul>
+                        <li>City</li>
+                        <li>Region</li>
+                        <li>State</li>
+                    </ul>
+                    <li><span class="badge-field">location_mappable</span>: The string representation of a geospatial point or polygon.</li>
+                    <ol>
+                        <li>Find the place in GeoNames' database: <a target="_blank" href="https://www.geonames.org/advanced-search.html?">https://www.geonames.org/advanced-search.html?</a>.</li>
+                        <li>Copy the place's longitude (second number on GeoNames' site).</li>
+                        <li>Copy the place's latitude (first numebr on GeoNames' site).</li>
+                        <li>If entering manually:</li>
+                        <ol>
+                            <li>Click on the data field, then click on the "Add Geometry" button the right-hand side of the pop-up window.</li>
+                            <li>Past the longitude, then a comma and a space, then the latitude.</li>
+                            <li>Click Yes. Then click Save.</li>
+                        </ol>
+                        <li>If entering via CSV import:</li>
+                        <ol>
+                            <li>In the column, compose the following string of characters: "POINT", a space, the longitude, a comma, a space, the latitude.</li>
+                        </ol>
+                    </ol>
+                    <li><span class="badge-field">location_certainty</span>: The confidence with which the location of the place is ascribed.</li>
+                    <ol>
+                        <li>High confidence</li>
+                        <li>Probable location</li>
+                        <li>Conjectual</li>
+                        <li>Uncertain</li>
+                        <li>Mobile</li>
+                    </ol>
+                    <li><span class="badge-field">geonames_id</span>: The ID of the place in the GeoNames database.</li>
+                    <ol>
+                        <li>Find the place in GeoNames' database: <a target="_blank" href="https://www.geonames.org/advanced-search.html?">https://www.geonames.org/advanced-search.html?</a>.</li>
+                        <li>Copy the place's ID number from the GeoNames website.</li>
+                    </ol>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-6">
+        <div class="card center" data-bs-theme="light">
+            <div class="card-body">
+                <h3><span class="badge-entity">Repository</span></h3>
+                <ul>
+                    <li><span class="badge-field">preferred_name</span>: The name by which the archival organization is most commonly known.</li>
+                    <li><span class="badge-field">city</span>: The city, town, or municipality in which the organization is located.</li>
+                    <ul>
+                        <li>You may need to create a <span class="badge-entity">Place</span> if one is not already in the database.</li>
+                    </ul>
+                    <li><span class="badge-field">alternative_name:</span> Relatively less common names by which the organization is known.</li>
+                    <li><span class="badge-field">VIAF</span>: The ID number in the Virtual Identity Authority File (VIAF) database that corresponds to the same organization.</li>
+                    <ol>
+                        <li>Look for the organization in VIAF's database: <a target="_blank" href="https://viaf.org/">https://viaf.org/</a>.</li>
+                        <li>Select the entry that is identical with the organization, i.e. <a target="_blank" href="https://viaf.org/viaf/51167864093422741819/#Biblioteca_Riccardiana_e_Moreniana">https://viaf.org/viaf/51167864093422741819/#Biblioteca_Riccardiana_e_Moreniana</a>.</li>
+                        <li>Copy and enter the organization's VIAF ID number, i.e. "51167864093422741819"</li>
+                    </ol>
+                    <li><span class="badge-field">biblissima_identifier</span>: The ID number in the Biblissima+ database that corresponds to the organization.</li>
+                    <ol>
+                        <li>Look for the organization in the Biblissima+ database: <a target="_blank" href="https://data.biblissima.fr/w/Sp%C3%A9cial:Recherche">https://data.biblissima.fr/w/Sp%C3%A9cial:Recherche</a>.</li>
+                        <li>Select the entry that is identical with the organization, i.e. <a target="_blank" href="https://data.biblissima.fr/w/Item:Q79184">https://data.biblissima.fr/w/Item:Q79184</a>.</li>
+                        <li>Copy and enter the organization's Q-Entity number, i.e. "Q79184"</li>
+                    </ol>
+                    <li><span class="badge-field">website</span>: The homepage of the organization.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</div>
