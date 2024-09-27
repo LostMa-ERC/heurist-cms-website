@@ -1,0 +1,161 @@
+<link rel="stylesheet" href="../../../css/heurist.css">
+
+<div class="card center" data-bs-theme="light">
+    <div class="card-body">
+        <p>Looking up records is useful in the following tasks:</p>
+        <ul>
+            <li>Checking if something is already in the database.</li>
+            <li>Reviewing all records based on a criteria (i.e. the review status is "Needs action").</li>
+            <li>Editing a record.</li>
+            <li>Exporting a set of records as a CSV file.</li>
+        </ul>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-6">
+        <div class="card center" data-bs-theme="light">
+            <div class="card-body">
+                <img 
+                src="https://github.com/LostMa-ERC/heurist-cms-website/blob/main/img/explore1.png?raw=true"
+                alt=""
+                class="center"
+                width="90%"
+                >
+                <h3>Step 1.</h3>
+                <p>Click on the Filter Builder button.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-6">
+        <div class="card center" data-bs-theme="light">
+            <div class="card-body">
+                <img 
+                src="https://github.com/LostMa-ERC/heurist-cms-website/blob/main/img/explore2.png?raw=true"
+                alt=""
+                class="center"
+                width="90%"
+                >
+                <h3>Step 2.</h3>
+                <p>Select the type of record you want to explore.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-6">
+        <div class="card center" data-bs-theme="light">
+            <div class="card-body">
+                <img 
+                src="https://github.com/LostMa-ERC/heurist-cms-website/blob/main/img/explore3.png?raw=true"
+                alt=""
+                class="center"
+                width="90%"
+                >
+                <h3>Step 3.a</h3>
+                <p>Select one of the record type's data fields that you want to use as the basis of your search.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-6">
+        <div class="card center" data-bs-theme="light">
+            <div class="card-body">
+                <img 
+                src="https://github.com/LostMa-ERC/heurist-cms-website/blob/main/img/explore4.png?raw=true"
+                alt=""
+                class="center"
+                width="90%"
+                >
+                <h3>Step 3.b</h3>
+                <p>For data fields that link to other records (i.e. <span class="badge-field">is_preserved_in</span> on the <span class="badge-entity">Document</span> record type) you can go a step further and create a filter based on data fields of the linked record type (i.e. the <span class="badge-field">city</span> of a <span class="badge-entity">Repository</span>).</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-6">
+        <div class="card center" data-bs-theme="light">
+            <div class="card-body">
+                <img 
+                src="https://github.com/LostMa-ERC/heurist-cms-website/blob/main/img/explore5.png?raw=true"
+                alt=""
+                class="center"
+                width="90%"
+                >
+                <h3>Step 4.a</h3>
+                <p>Specify the condition you want the data field to satsify.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-6">
+        <div class="card center" data-bs-theme="light">
+            <div class="card-body">
+                <img 
+                src="https://github.com/LostMa-ERC/heurist-cms-website/blob/main/img/explore6.png?raw=true"
+                alt=""
+                class="center"
+                width="90%"
+                >
+                <h3>Step 4.b</h3>
+                <p>If the data field is a linked record, you can select a specific record for the filter.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-6">
+        <div class="card center" data-bs-theme="light">
+            <div class="card-body">
+                <img 
+                src="https://github.com/LostMa-ERC/heurist-cms-website/blob/main/img/explore7.png?raw=true"
+                alt=""
+                class="center"
+                width="90%"
+                >
+                <h3>Step 5.</h3>
+                <p>Once your condition or conditions are set, click the Filter button on the bottom right of the pop-up window.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-6">
+        <div class="card center" data-bs-theme="light">
+            <div class="card-body">
+                <img 
+                src="https://github.com/LostMa-ERC/heurist-cms-website/blob/main/img/explore8.png?raw=true"
+                alt=""
+                class="center"
+                width="90%"
+                >
+                <h3>Step 6.</h3>
+                <p>The filter will be translated into Heurist's own language (i.e. {"t": "106"}), which we can see in the box at the top of the page.</p>
+                <p>The records that satisfy the filter's condition (i.e. manuscripts located in Paris) are listed below the filter.</p>
+                <p>You can view an individual record by clicking on it in the list and selecting the tab "Record" from the right pane.</p>
+                <p>To export all the records that satisfy the filter's condition, select the "Export" tab, click the "CSV" button, and proceed to select the data fields you want included in your CSV export.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="card center" data-bs-theme="light">
+
+    <div class="row">
+        <div class="col-6">
+            <div class="card-body">
+                <h2>Editing existing records</h2>
+                <p>Once you find the record you're looking for, you can edit it.</p>
+                <ol>
+                    <li>Click on the record from the list of search results.</li>
+                    <li>Make sure the "Record" tab on the right-hand pane on the Explore page is selected.</li>
+                    <li>Click on the pencil next to the record's Heurist ID number. This will open a pop-up window that is identical to the window used to create a new record. However, the existing record's information will pre-populate the data fields.</li>
+                    <li>Edit the record's data fields.</li>
+                    <li>Either save your changes or drop the changes, and close the pop-up window using the "Close" button.</li>
+                </ol>
+            </div>
+        </div>
+        <div class="col-6">
+            <img
+            src="https://github.com/LostMa-ERC/heurist-cms-website/blob/main/img/explore0.png?raw=true"
+            alt=""
+            width="100%"
+            class="center"
+            >
+        </div>
+    </div>
+</div>
