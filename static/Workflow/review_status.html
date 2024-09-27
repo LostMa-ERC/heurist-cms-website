@@ -1,0 +1,78 @@
+<link rel="stylesheet" href="../../css/heurist.css">
+
+<div class="card text-center" data-bs-theme="light">
+
+    <div class="card-body">
+
+        <h2>Review Status</h2>
+
+        <p>Every main and secondary entity must have a review status. This status allows us to keep track of whether the entity needs further editing or whether it is ready for publication. There are 3 phases of review.</p>
+
+        <ul>
+            <li>Open</li>
+            <li>Publish</li>
+            <li>Action required</li>
+        </ul>
+    
+    </div>
+
+</div>
+
+<div class="row">
+
+    <div class="col-4">
+        <div class="card text-center" data-bs-theme="light">
+            <div class="card-body">
+                <b>Open</b>
+                <p>The status "Open" indicates that a record is not ready to be published; however, it is not a priority for review. There is nothing glaringly wrong with it, and nothing suspected of being incorrect.</p>
+                <p>All new records should, by default, be given the status "Open," unless you know a new record has an issue needing correction, in which case it should be given the status "Action required."</p>
+                <p>A record should keep the status "Open" until it is ready to be made public and shifted to the status "Publish."</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-4">
+        <div class="card text-center" data-bs-theme="light">
+            <div class="card-body">
+                <b>Publish</b>
+                <p>The status "Publish" indicates that a record has been manually reviewed and considered complete. The entity's information is accurate and it is not missing anything important or expected.</p>
+                <p>Entities of this status are ready to be made public and included in published datasets.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-4">
+        <div class="card text-center" data-bs-theme="light">
+            <div class="card-body">
+                <b>Action required</b>
+                <p>The status "Action required" indicates that a record has a known issue. Such issues can include the following:</p>
+                
+                <ul>
+                    <li>A data field has placeholder information that is known to be inaccurate and needs replacing.</li>
+                    <li>Information is suspected of being inaccurate.</li>
+                    <li>The record is suspected of being a duplicate of another record.</li>
+                    <li>Information is known to be available but missing from the record.</li>
+                </ul>
+
+                <p>It is highly recommended that when a record's review status is set to "Action required" that you include a note on the record, in the field "review_note," that describes the known issue with the record.</p>
+
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="card text-center" data-bs-theme="light">
+
+    <div class="card-body">
+
+        <h2>Review Note</h2>
+
+        <p>Alongside review status, entities also have a data field in which to save notes about what kind of further action is needed to finish proofreading the entity. This latter field is optional but recommended if the review status is "Action needed."</p>
+
+        <p>The text in the review note should be written in a way so that any contributor can understand the issue with the entity.</p>
+        
+        <p>It can be helpful to write the note in a way that a filter on certain terms or phrases, i.e. "check if duplicate," helps you find the entity again when you are ready to edit and make the necessary corrections.</p>
+
+    </div>
+</div>
